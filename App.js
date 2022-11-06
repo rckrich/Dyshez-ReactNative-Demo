@@ -7,6 +7,7 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import LandingScreen from './pages/auth/Landing'
 import RegisterScreen from './pages/auth/Register'
+import BottomTab from './components/BottomTab'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCfVmH8doh8QtGsgYRiggqOZltbMzECXmU',
@@ -37,7 +38,7 @@ const App = () => {
                 setIsLoaded(true)
             }
         })
-    }, [])
+    })
 
     if (!setIsLoaded)
         return (
@@ -66,9 +67,9 @@ const App = () => {
     }
 
     return (
-        <View style={{ flex: 1, justifyContent: 'center' }}>
-            <Text>User is logged</Text>
-        </View>
+        <NavigationContainer>
+            <BottomTab />
+        </NavigationContainer>
     )
 }
 
