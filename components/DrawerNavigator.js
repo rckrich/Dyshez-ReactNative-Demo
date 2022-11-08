@@ -40,7 +40,6 @@ const DrawerNavigator = () => {
                     backgroundColor: '#fff',
                 },
                 drawerPosition: 'right',
-
                 // headerRight: () => (
                 //     <Text onPress={() => navigation.openDrawer()}>Hola</Text>
                 // ),

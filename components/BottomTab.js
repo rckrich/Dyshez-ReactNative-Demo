@@ -1,29 +1,79 @@
 import * as React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, Image } from 'react-native'
 
+import ProfileScreen from './../pages/Profile'
+import FeedScreen from './../pages/Feed'
+import BillsScreen from './../pages/Bills'
+import CodeReaderScreen from '../pages/CodeReader'
 import HomeScreen from '../pages/Home'
-import BillsScreen from '../pages/Bills'
 
 const Tab = createBottomTabNavigator()
 
 const BottomTab = () => {
     return (
-        <Tab.Navigator initialRouteName="HomeScreen">
+        <Tab.Navigator
+            initialRouteName="HomeScreen"
+            screenOptions={{ tabBarShowLabel: false, headerShown: false }}
+        >
             <Tab.Screen
-                name={'HomeStackNavigator'}
-                component={HomeScreen}
+                name="CodeReader"
+                component={CodeReaderScreen}
                 options={{
-                    tabBarLabel: 'Home Screen',
-                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Image
+                            source={require('../assets/icons/scan.png')}
+                            style={{ width: 25, height: 25 }}
+                        />
+                    ),
                 }}
             />
             <Tab.Screen
-                name={'BookStackNavigator'}
+                name="Bills"
                 component={BillsScreen}
                 options={{
-                    tabBarLabel: 'Book Screen',
-                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Image
+                            source={require('../assets/icons/bills.png')}
+                            style={{ width: 25, height: 25 }}
+                        />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <Image
+                            source={require('../assets/icons/home.png')}
+                            style={{ width: 25, height: 25 }}
+                        />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Feed"
+                component={FeedScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <Image
+                            source={require('../assets/icons/feed.png')}
+                            style={{ width: 25, height: 25 }}
+                        />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Profile"
+                component={ProfileScreen}
+                options={{
+                    tabBarIcon: () => (
+                        <Image
+                            source={require('../assets/icons/profile.png')}
+                            style={{ width: 25, height: 25 }}
+                        />
+                    ),
                 }}
             />
         </Tab.Navigator>
