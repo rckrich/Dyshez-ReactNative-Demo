@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { initializeApp } from 'firebase/app'
@@ -67,9 +67,11 @@ const App = () => {
     }
 
     return (
-        <NavigationContainer>
-            <BottomTab />
-        </NavigationContainer>
+        <SafeAreaView>
+            <NavigationContainer>
+                <BottomTab />
+            </NavigationContainer>
+        </SafeAreaView>
     )
 }
 
