@@ -19,14 +19,29 @@ const DrawerNavigator = () => {
             <DrawerContentScrollView contentContainerStyle={{ flex: 1 }}>
                 <View
                     style={{
-                        backgroundColor: '#4f4f4f',
-                        height: 100,
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        backgroundColor: '#fff',
+                        height: 50,
                         top: -5,
                     }}
                 >
-                    <Text style={{ color: '#fff' }}>Home</Text>
+                    <View
+                        style={[
+                            {
+                                marginTop: 10,
+                                flexDirection: 'row',
+                                justifyContent: 'space-around',
+                            },
+                        ]}
+                    >
+                        <Image
+                            style={{ width: 30, height: 30 }}
+                            source={require('../assets/icons/pink-icon.png')}
+                        />
+                        <Image
+                            style={{ width: 20, height: 20, marginTop: 5 }}
+                            source={require('../assets/icons/menu.png')}
+                        />
+                    </View>
                 </View>
                 <DrawerItemList {...props} />
             </DrawerContentScrollView>
@@ -36,29 +51,126 @@ const DrawerNavigator = () => {
     return (
         <Drawer.Navigator
             screenOptions={{
-                drawerStyle: {
-                    backgroundColor: '#fff',
-                },
+                drawerStyle: styles.drawerStyle,
                 drawerPosition: 'right',
                 // headerRight: () => (
                 //     <Text onPress={() => navigation.openDrawer()}>Hola</Text>
                 // ),
                 headerTitle: () => <Header />,
+                drawerItemStyle: styles.drawerItem,
             }}
             drawerContent={DrawerHeaderContent}
         >
             <Drawer.Screen
-                name={'BottomTabNavigator'}
+                name={'Home'}
                 component={BottomTab}
                 options={{
-                    drawerLabel: 'Home Screen',
+                    drawerLabel: 'Inicio',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/home.png')}
+                        />
+                    ),
                 }}
             />
             <Drawer.Screen
-                name={'MyRewardsStackNavigator'}
-                component={BillsScreen}
+                name={'Profile'}
+                component={BottomTab}
                 options={{
-                    drawerLabel: 'My Rewards Screen',
+                    drawerLabel: 'Mi Perfil',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/profile.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Bills'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Mis Cuentas',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/bills.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Accounts'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Cuentas Pagadas',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/paid.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Direct'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Dyshez Direct',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/direct.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Orders'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Mis pedidos',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/basket.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Help'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Ayuda',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/help.png')}
+                        />
+                    ),
+                }}
+            />
+            <Drawer.Screen
+                name={'Login'}
+                component={BottomTab}
+                options={{
+                    drawerLabel: 'Iniciar Sesión',
+                    drawerLabelStyle: styles.drawerLabelStyle,
+                    drawerIcon: () => (
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../assets/icons/profile.png')}
+                        />
+                    ),
                 }}
             />
         </Drawer.Navigator>
@@ -66,33 +178,10 @@ const DrawerNavigator = () => {
 }
 
 const styles = StyleSheet.create({
-    headerLeft: {
-        marginLeft: 10,
-    },
-    headerTitle: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: '500',
-    },
-    headerRight: {
-        marginRight: 15,
-    },
-    // drawer content
-    drawerLabel: {
-        fontSize: 14,
-    },
-    drawerLabelFocused: {
-        fontSize: 14,
-        color: '#551E18',
-        fontWeight: '500',
-    },
-    drawerItem: {
-        height: 50,
-        justifyContent: 'center',
-    },
-    drawerItemFocused: {
-        backgroundColor: '#ba9490',
-    },
+    drawerItem: { borderBottomColor: '#efefef', borderBottomWidth: 2 },
+    drawerStyle: { backgroundColor: '#fff' },
+    drawerLabelStyle: { fontSize: 16, color: '#666666', marginVertical: 8 },
+    imageStyle: { width: 20, height: 20, marginLeft: 10 },
 })
 
 export default DrawerNavigator
