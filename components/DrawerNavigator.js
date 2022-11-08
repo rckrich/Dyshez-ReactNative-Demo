@@ -58,6 +58,7 @@ const DrawerNavigator = () => {
                 // ),
                 headerTitle: () => <Header />,
                 drawerItemStyle: styles.drawerItem,
+                headerTintColor: '#d5145a',
             }}
             drawerContent={DrawerHeaderContent}
         >
