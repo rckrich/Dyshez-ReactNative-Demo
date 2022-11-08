@@ -8,7 +8,7 @@ import {
     TouchableOpacity,
 } from 'react-native'
 
-function Header2() {
+function RightButtons() {
     return (
         <View
             style={[
@@ -35,4 +35,4 @@ function Header2() {
     )
 }
 
-export default Header2
+export default RightButtons
