@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import LandingScreen from './pages/auth/Landing'
 import RegisterScreen from './pages/auth/Register'
+import BottomTab from './components/BottomTab'
+import DrawerNavigator from './components/DrawerNavigator'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCfVmH8doh8QtGsgYRiggqOZltbMzECXmU',
@@ -23,28 +25,17 @@ export const auth = getAuth(app)
 const Stack = createStackNavigator()
 
 const App = () => {
-    const [isLoaded, setIsLoaded] = useState(false)
     const [isLogged, setIsLogged] = useState(false)
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
-            console.log(user)
             if (!user) {
-                setIsLoaded(false)
-                setIsLoading(true)
+                setIsLogged(false)
             } else {
                 setIsLogged(true)
-                setIsLoaded(true)
             }
         })
-    }, [])
-
-    if (!setIsLoaded)
-        return (
-            <View style={{ flex: 1, justifyContent: 'center' }}>
-                <Text>Loading</Text>
-            </View>
-        )
+    })
 
     if (!isLogged) {
         return (
@@ -66,9 +57,17 @@ const App = () => {
     }
 
     return (
-        <View style={{ flex: 1, justifyContent: 'center' }}>
-            <Text>User is logged</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1 }}>
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName="DrawerNavigator">
+                    <Stack.Screen
+                        name="DrawerNavigator"
+                        component={DrawerNavigator}
+                        options={{ headerShown: false }}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </SafeAreaView>
     )
 }
 
