@@ -1,24 +1,42 @@
-import React from 'react'
-import { Text, View, Image, StyleSheet } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { Text, View, Image, StyleSheet, ActivityIndicator } from 'react-native'
+import SearchBar from '../components/SearchBar'
 
 function Home() {
     return (
-        <View style={styles.container}>
-            <Image
-                source={require('../assets/icons/home.png')}
-                style={styles.logo}
-            />
-            <Text style={styles.text}>Home</Text>
-        </View>
+        <>
+            <View style={styles.searchContainer}>
+                <SearchBar />
+            </View>
+            <View style={styles.container}>
+                <Image
+                    source={require('../assets/icons/home.png')}
+                    style={styles.logo}
+                />
+                <Text style={styles.text}>Home</Text>
+            </View>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
+        backgroundColor: '#f6f6f6',
+    },
+    searchContainer: {
+        height: 80,
+        backgroundColor: '#fff',
+        padding: 14,
+    },
+    title: {
+        width: '100%',
+        marginTop: 20,
+        fontSize: 25,
+        fontWeight: 'bold',
+        marginLeft: '10%',
     },
     logo: {
         width: 150,
