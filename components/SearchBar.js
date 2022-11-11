@@ -10,8 +10,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
-
-const list = ['Dua Lipa', 'The weekend', 'Jose Jose']
+import { restaurants } from '../utils/restaurantsData'
 
 const SearchBar = () => {
     const [searchLabel, setSearchLabel] = useState('')
@@ -23,25 +22,28 @@ const SearchBar = () => {
     }
 
     return (
-        <View style={styles.searchSection}>
-            <TextInput
-                onChangeText={(search) => setSearchLabel(search)}
-                style={styles.input}
-                placeholder="Buscar"
-            />
+        <>
+            <View style={styles.searchSection}>
+                <TextInput
+                    onChangeText={(search) => setSearchLabel(search)}
+                    style={styles.input}
+                    placeholder="Buscar"
+                />
 
-            <Image
-                style={styles.icon}
-                source={require('../assets/icons/search.png')}
-            />
+                <Image
+                    style={styles.icon}
+                    source={require('../assets/icons/search.png')}
+                />
+            </View>
 
-            {/* 
-          
-            {searchLabel !== '' &&
-                filterList(list).map((listItem, index) => (
-                    <Item key={index} name={listItem} />
-                ))} */}
-        </View>
+            {searchLabel !== '' && (
+                <View>
+                    {filterList(restaurants).map((restaurant, index) => (
+                        <Item key={index} name={restaurant} />
+                    ))}
+                </View>
+            )}
+        </>
     )
 }
 export default SearchBar
@@ -57,10 +59,9 @@ const styles = StyleSheet.create({
     },
     input: {
         backgroundColor: '#f2f4f6',
-        // height: 50,
         borderRadius: 50,
         width: '90%',
-        padding: 20,
+        padding: 15,
         fontSize: 18,
     },
     icon: {
