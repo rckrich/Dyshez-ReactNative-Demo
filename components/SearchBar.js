@@ -10,14 +10,14 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
-import { restaurants } from '../utils/restaurantsData'
+import { searchResponse } from '../utils/restaurantsData'
 
 const SearchBar = () => {
     const [searchLabel, setSearchLabel] = useState('')
 
     function filterList(list) {
         return list.filter((listItem) =>
-            listItem.toLowerCase().includes(searchLabel.toLowerCase())
+            listItem.name.toLowerCase().includes(searchLabel.toLowerCase())
         )
     }
 
@@ -38,8 +38,8 @@ const SearchBar = () => {
 
             {searchLabel !== '' && (
                 <View>
-                    {filterList(restaurants).map((restaurant, index) => (
-                        <Item key={index} name={restaurant} />
+                    {filterList(searchResponse).map((restaurant, index) => (
+                        <Item key={index} name={restaurant.name} />
                     ))}
                 </View>
             )}

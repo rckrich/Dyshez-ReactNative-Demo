@@ -11,14 +11,16 @@ const Item = ({ name }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'blue',
+        backgroundColor: '#fff',
         alignItems: 'center',
-        height: 90,
-        margin: 10,
+        height: 50,
+        margin: 5,
         width: '90%',
+        borderColor: '#f6f6f6',
+        borderWidth: 1,
     },
     text: {
-        color: 'white',
+        color: '#000',
         fontSize: 24,
     },
 })
