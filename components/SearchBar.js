@@ -11,6 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
 import { searchResponse } from '../utils/restaurantsData'
+import RestaurantsSearch from './RestaurantsSearch'
 
 const SearchBar = () => {
     const [searchLabel, setSearchLabel] = useState('')
@@ -48,6 +49,8 @@ const SearchBar = () => {
                     ))}
                 </View>
             )}
+
+            <RestaurantsSearch />
         </>
     )
 }
@@ -61,6 +64,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f4f6',
         width: '100%',
         borderRadius: 50,
+        marginBottom: 10,
     },
     input: {
         backgroundColor: '#f2f4f6',
