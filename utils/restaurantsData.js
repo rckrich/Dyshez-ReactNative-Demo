@@ -1,19 +1,80 @@
 export const searchResponse = [
-    { name: 'Bostons Pizza Restaurant Bar', type: 'Restaurante' },
-    { name: 'Pizza Hut', type: 'Restaurante' },
-    { name: 'Pizzeria Dominos', type: 'Restaurante' },
-    { name: 'Mc Donalds', type: 'Restaurante' },
-    { name: 'Roca', type: 'Restaurante' },
+    {
+        name: 'Bostons Pizza Restaurant Bar',
+        type: 'Restaurante',
+        id: 'bostons',
+    },
+    {
+        name: 'Pizza Hut',
+        type: 'Restaurante',
+        id: 'pizzahut',
+    },
+    {
+        name: 'Pizzeria Dominos',
+        type: 'Restaurante',
+        id: 'dominos',
+    },
+    {
+        name: 'Mc Donalds',
+        type: 'Restaurante',
+        id: 'mcdonalds',
+    },
+    {
+        name: 'Roca',
+        type: 'Restaurante',
+        logo: '../restaurants/bostons.svg',
+        id: 'roca',
+    },
     // Platillos
-    { name: 'Pizza de pepperoni', type: 'Platillo' },
-    { name: 'Pizzaburguer', type: 'Platillo' },
-    { name: 'Hamburguesa Clasica', type: 'Platillo' },
-    { name: 'Burro de pastor', type: 'Platillo' },
-    { name: 'Torta de Bistec', type: 'Platillo' },
+    {
+        name: 'Pizza de pepperoni',
+        type: 'Platillo',
+        id: 'pizzapepperoni',
+    },
+    {
+        name: 'Pizzaburguer',
+        type: 'Platillo',
+        id: 'pizzaburguer',
+    },
+    {
+        name: 'Hamburguesa Clasica',
+        type: 'Platillo',
+        id: 'burguer',
+    },
+    {
+        name: 'Burro de pastor',
+        type: 'Platillo',
+        id: 'burro',
+    },
+    {
+        name: 'Torta de Bistec',
+        type: 'Platillo',
+        id: 'torta',
+    },
     // Usuarios
-    { name: 'Eduardo Pizzarro', type: 'Usuario' },
-    { name: 'Julio Pizzarro', type: 'Usuario' },
-    { name: 'Jose Dominguez', type: 'Usuario' },
-    { name: 'Pedro Alcazar', type: 'Usuario' },
-    { name: 'Eduardo Gomez', type: 'Usuario' },
+    {
+        name: 'Eduardo Pizzarro',
+        type: 'Usuario',
+        id: 'profile1',
+    },
+    {
+        name: 'Julio Pizzarro',
+        type: 'Usuario',
+        id: 'profile2',
+    },
+    {
+        name: 'Jose Dominguez',
+        type: 'Usuario',
+        id: 'profile3',
+    },
+    {
+        name: 'Pedro Alcazar',
+        type: 'Usuario',
+        id: 'profile4',
+    },
+    {
+        name: 'Eduardo Gomez',
+        type: 'Usuario',
+        id: 'profile5',
+    },
 ]

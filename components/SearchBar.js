@@ -39,7 +39,12 @@ const SearchBar = () => {
             {searchLabel !== '' && (
                 <View>
                     {filterList(searchResponse).map((restaurant, index) => (
-                        <Item key={index} name={restaurant.name} />
+                        <Item
+                            key={index}
+                            name={restaurant.name}
+                            type={restaurant.type}
+                            id={restaurant.id}
+                        />
                     ))}
                 </View>
             )}
