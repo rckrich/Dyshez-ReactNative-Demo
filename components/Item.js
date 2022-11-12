@@ -30,8 +30,10 @@ const Item = ({ name, type, id }) => {
     return (
         <View style={styles.container}>
             <Image style={styles.logo} source={imageSelect(id)} />
-            <Text style={styles.text}>{name}</Text>
-            <Text>{type}</Text>
+            <View styles={styles.labels}>
+                <Text style={styles.name}>{name}</Text>
+                <Text style={styles.type}>{type}</Text>
+            </View>
         </View>
     )
 }
@@ -40,19 +42,32 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         alignItems: 'center',
-        height: 100,
-        margin: 5,
-        width: '90%',
+        height: 70,
+        marginVertical: 5,
+        width: '100%',
+        paddingHorizontal: 15,
         borderColor: '#f6f6f6',
         borderWidth: 1,
+        flexDirection: 'row',
+        borderRadius: 15,
     },
-    text: {
+    name: {
         color: '#000',
-        fontSize: 24,
+        fontSize: 16,
+        marginLeft: 10,
+        fontWeight: '600',
+    },
+    type: {
+        fontSize: 14,
+        marginLeft: 10,
     },
     logo: {
-        width: 50,
-        height: 50,
+        width: 55,
+        height: 55,
+        borderRadius: 50,
+    },
+    labels: {
+        flexDirection: 'column',
     },
 })
 
