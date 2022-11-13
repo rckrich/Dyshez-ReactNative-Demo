@@ -52,6 +52,8 @@ const RestaurantsSearch = () => {
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             numColumns={2}
+            ListFooterComponent={<View />}
+            ListFooterComponentStyle={{ height: 100 }}
         />
     )
 }
