@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
 import { searchResponse } from '../utils/restaurantsData'
 import RestaurantsSearch from './RestaurantsSearch'
+import Address from '../ui/molecules/Address'
 
 const SearchBar = () => {
     const [searchLabel, setSearchLabel] = useState('')
@@ -50,6 +51,9 @@ const SearchBar = () => {
                 </View>
             )}
 
+            <Address />
+
+            <Text style={styles.title}>Restaurantes Cercanos</Text>
             <RestaurantsSearch />
         </>
     )
@@ -76,5 +80,9 @@ const styles = StyleSheet.create({
     icon: {
         width: 15,
         height: 15,
+    },
+    title: {
+        fontWeight: '900',
+        fontSize: 20,
     },
 })
