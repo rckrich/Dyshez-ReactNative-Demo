@@ -14,7 +14,10 @@ const BottomTab = () => {
     return (
         <Tab.Navigator
             initialRouteName="HomeScreen"
-            screenOptions={{ tabBarShowLabel: false, headerShown: false }}
+            screenOptions={{
+                tabBarShowLabel: false,
+                headerShown: false,
+            }}
         >
             <Tab.Screen
                 name="CodeReader"
