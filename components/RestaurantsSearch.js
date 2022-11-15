@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'orange',
         position: 'relative',
         margin: 5,
-        height: 200,
+        height: 150,
         borderRadius: 15,
     },
     image: {
