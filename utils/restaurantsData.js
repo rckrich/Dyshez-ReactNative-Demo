@@ -1,29 +1,43 @@
 export const searchResponse = [
     {
-        name: 'Bostons Pizza Restaurant Bar',
+        name: 'Barrio Regio',
         type: 'Restaurante',
-        id: 'bostons',
+        id: 'barrioregio',
     },
     {
-        name: 'Pizza Hut',
+        name: 'Fridays',
         type: 'Restaurante',
-        id: 'pizzahut',
+        id: 'fridays',
     },
     {
-        name: 'Pizzeria Dominos',
+        name: 'Fuddruckers',
         type: 'Restaurante',
-        id: 'dominos',
+        id: 'fuddruckers',
     },
     {
-        name: 'Mc Donalds',
+        name: 'Il Piattino',
         type: 'Restaurante',
-        id: 'mcdonalds',
+        id: 'ilpiattino',
+    },
+    {
+        name: 'Okana',
+        type: 'Restaurante',
+        id: 'okana',
+    },
+    {
+        name: 'Orsons',
+        type: 'Restaurante',
+        id: 'orsons',
     },
     {
         name: 'Roca',
         type: 'Restaurante',
-        logo: '../restaurants/bostons.svg',
         id: 'roca',
+    },
+    {
+        name: 'Siqueff',
+        type: 'Restaurante',
+        id: 'siqueff',
     },
     // Platillos
     {

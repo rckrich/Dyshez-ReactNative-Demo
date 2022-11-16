@@ -7,9 +7,36 @@ import {
     StatusBar,
     Image,
 } from 'react-native'
-import Images from '../utils/imagesIndex'
+import Images from '../../utils/imagesIndex'
 
 const DATA = [
+    {
+        id: Images.restaurants.barrioregio,
+    },
+    {
+        id: Images.restaurants.fridays,
+    },
+    {
+        id: Images.restaurants.fuddruckers,
+    },
+    {
+        id: Images.restaurants.ilpiattino,
+    },
+    {
+        id: Images.restaurants.okana,
+    },
+    {
+        id: Images.restaurants.orsons,
+    },
+    {
+        id: Images.restaurants.okana,
+    },
+    {
+        id: Images.restaurants.roca,
+    },
+    {
+        id: Images.restaurants.siqueff,
+    },
     {
         id: Images.restaurants.barrioregio,
     },
@@ -34,15 +61,18 @@ const DATA = [
     {
         id: Images.restaurants.siqueff,
     },
+    {
+        id: Images.restaurants.roca,
+    },
 ]
 
 const RestaurantCard = ({ id }) => (
     <View style={styles.card}>
-        <Image source={id} resizeMode="contain" />
+        <Image source={id} resizeMode="cover" />
     </View>
 )
 
-const RestaurantsSearch = () => {
+const FeedCards = () => {
     const renderItem = ({ item }) => <RestaurantCard id={item.id} />
 
     return (
@@ -51,9 +81,9 @@ const RestaurantsSearch = () => {
             data={DATA}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
-            numColumns={2}
+            numColumns={3}
             ListFooterComponent={<View />}
-            ListFooterComponentStyle={{ height: 100 }}
+            ListFooterComponentStyle={{ height: 30 }}
         />
     )
 }
@@ -67,11 +97,9 @@ const styles = StyleSheet.create({
         flex: 1,
         overflow: 'hidden',
         alignItems: 'center',
-        backgroundColor: 'orange',
         position: 'relative',
-        margin: 5,
-        height: 150,
-        borderRadius: 15,
+        margin: 1,
+        height: 130,
     },
     image: {
         flex: 1,
@@ -80,4 +108,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default RestaurantsSearch
+export default FeedCards

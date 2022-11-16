@@ -6,11 +6,14 @@ const imageSelect = (id) => {
     if (id === null) return Images.restaurants.other
 
     const imageArray = {
-        bostons: Images.restaurants.bostons,
-        pizzahut: Images.restaurants.pizzahut,
-        dominos: Images.restaurants.dominos,
-        mcdonalds: Images.restaurants.mcdonalds,
+        barrioregio: Images.restaurants.barrioregio,
+        fridays: Images.restaurants.fridays,
+        fuddruckers: Images.restaurants.fuddruckers,
+        ilpiattino: Images.restaurants.ilpiattino,
+        okana: Images.restaurants.okana,
+        orsons: Images.restaurants.orsons,
         roca: Images.restaurants.roca,
+        siqueff: Images.restaurants.siqueff,
         pizzapepperoni: Images.dishes.pizzapepperoni,
         pizzaburguer: Images.dishes.pizzaburguer,
         burguer: Images.dishes.pizzaburguer,

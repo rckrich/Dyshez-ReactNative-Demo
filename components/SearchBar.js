@@ -50,11 +50,6 @@ const SearchBar = () => {
                     ))}
                 </View>
             )}
-
-            <Address />
-
-            <Text style={styles.title}>Restaurantes Cercanos</Text>
-            <RestaurantsSearch />
         </>
     )
 }

@@ -1,9 +1,12 @@
 export const Images = {
     restaurants: {
-        bostons: require('../assets/restaurants/bostons.svg'),
-        pizzahut: require('../assets/restaurants/pizzahut.svg'),
-        dominos: require('../assets/restaurants/dominos.svg'),
-        mcdonalds: require('../assets/restaurants/mcdonalds.png'),
+        barrioregio: require('../assets/restaurants/barrioregio.png'),
+        fridays: require('../assets/restaurants/fridays.png'),
+        fuddruckers: require('../assets/restaurants/fuddruckers.png'),
+        ilpiattino: require('../assets/restaurants/ilpiattino.png'),
+        okana: require('../assets/restaurants/okana.png'),
+        orsons: require('../assets/restaurants/orsons.png'),
+        siqueff: require('../assets/restaurants/siqueff.png'),
         roca: require('../assets/restaurants/roca.png'),
     },
     dishes: {
