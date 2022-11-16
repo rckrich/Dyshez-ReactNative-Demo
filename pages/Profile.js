@@ -5,11 +5,13 @@ import Address from '../ui/molecules/Address'
 import RestaurantsSearch from '../components/RestaurantsSearch'
 import ProfileTabs from '../ui/molecules/ProfileTabs'
 import ProfileHeader from '../ui/molecules/ProfileHeader'
+import Badges from '../ui/molecules/Badges'
 
 function Profile() {
     return (
         <View style={styles.searchContainer}>
             <ProfileHeader />
+            <Badges />
             <ProfileTabs />
         </View>
     )
