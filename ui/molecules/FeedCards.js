@@ -11,55 +11,55 @@ import Images from '../../utils/imagesIndex'
 
 const DATA = [
     {
-        id: Images.restaurants.roca,
+        id: Images.restaurants.barrioregio,
+    },
+    {
+        id: Images.restaurants.fridays,
+    },
+    {
+        id: Images.restaurants.fuddruckers,
+    },
+    {
+        id: Images.restaurants.ilpiattino,
+    },
+    {
+        id: Images.restaurants.okana,
+    },
+    {
+        id: Images.restaurants.orsons,
+    },
+    {
+        id: Images.restaurants.okana,
     },
     {
         id: Images.restaurants.roca,
     },
     {
-        id: Images.restaurants.roca,
+        id: Images.restaurants.siqueff,
+    },
+    {
+        id: Images.restaurants.barrioregio,
+    },
+    {
+        id: Images.restaurants.fridays,
+    },
+    {
+        id: Images.restaurants.fuddruckers,
+    },
+    {
+        id: Images.restaurants.ilpiattino,
+    },
+    {
+        id: Images.restaurants.okana,
+    },
+    {
+        id: Images.restaurants.orsons,
     },
     {
         id: Images.restaurants.roca,
     },
     {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.roca,
+        id: Images.restaurants.siqueff,
     },
     {
         id: Images.restaurants.roca,
@@ -68,7 +68,7 @@ const DATA = [
 
 const RestaurantCard = ({ id }) => (
     <View style={styles.card}>
-        <Image source={id} resizeMode="contain" />
+        <Image source={id} resizeMode="cover" />
     </View>
 )
 
