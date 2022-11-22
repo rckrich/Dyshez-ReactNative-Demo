@@ -37,8 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         height: 90,
         padding: 10,
-        flexDirection: 'column',halomexico15
-        
+        flexDirection: 'column',
         alignItems: 'flex-start',
     },
     labels: {
