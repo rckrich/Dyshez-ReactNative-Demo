@@ -8,7 +8,9 @@ const Address = () => {
                 style={styles.image}
                 source={require('../../assets/icons/location.png')}
             />
-            <Text>Calle 30, 310 A, Montebello, Mérida, México</Text>
+            <Text style={styles.text}>
+                Calle 30, 310 A, Montebello, Mérida, México
+            </Text>
         </View>
     )
 }
@@ -22,6 +24,10 @@ const styles = StyleSheet.create({
     image: {
         width: 25,
         height: 25,
+    },
+    text: {
+        fontSize: 13,
+        color: '#606368',
     },
 })
 

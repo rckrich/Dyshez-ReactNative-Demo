@@ -69,8 +69,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f4f6',
         borderRadius: 50,
         width: '90%',
-        padding: 15,
+        paddingHorizontal: 15,
         fontSize: 18,
+        height: 37,
     },
     icon: {
         width: 15,

@@ -90,7 +90,7 @@ const FeedCards = () => {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 10,
+        marginVertical: 2,
     },
     card: {
         backgroundColor: '#fff',

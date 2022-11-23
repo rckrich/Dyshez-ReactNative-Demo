@@ -17,6 +17,12 @@ const DATA = [
         id: Images.restaurants.fridays,
     },
     {
+        id: Images.restaurants.fridays,
+    },
+    {
+        id: Images.restaurants.fridays,
+    },
+    {
         id: Images.restaurants.fuddruckers,
     },
     {
@@ -67,7 +73,6 @@ const styles = StyleSheet.create({
         flex: 1,
         overflow: 'hidden',
         alignItems: 'center',
-        backgroundColor: 'orange',
         position: 'relative',
         margin: 5,
         height: 150,

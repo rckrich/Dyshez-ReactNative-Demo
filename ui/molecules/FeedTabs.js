@@ -25,16 +25,24 @@ const Tab = createMaterialTopTabNavigator()
 
 const FeedTabs = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={{
+                tabBarIndicatorStyle: { backgroundColor: '#434343' },
+            }}
+        >
             <Tab.Screen
                 name="Dishes"
                 component={DishesScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/dishes.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -44,10 +52,14 @@ const FeedTabs = () => {
                 component={RestaurantsScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/restaurants.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -57,10 +69,14 @@ const FeedTabs = () => {
                 component={ProfileScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/profile.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}

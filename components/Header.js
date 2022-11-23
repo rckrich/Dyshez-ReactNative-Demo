@@ -4,7 +4,7 @@ import { Image, Text } from 'react-native'
 function Header() {
     return (
         <Image
-            style={{ width: 140, height: 40 }}
+            style={{ width: 90, height: 37, resizeMode: 'contain' }}
             source={require('../assets/logo-pink.png')}
         />
     )

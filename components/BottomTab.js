@@ -23,10 +23,14 @@ const BottomTab = () => {
                 name="CodeReader"
                 component={CodeReaderScreen}
                 options={{
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../assets/icons/scan.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -35,10 +39,14 @@ const BottomTab = () => {
                 name="Bills"
                 component={BillsScreen}
                 options={{
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../assets/icons/bills.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -47,10 +55,14 @@ const BottomTab = () => {
                 name="Home"
                 component={HomeScreen}
                 options={{
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../assets/icons/home.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -59,10 +71,14 @@ const BottomTab = () => {
                 name="Feed"
                 component={FeedScreen}
                 options={{
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../assets/icons/feed.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -71,10 +87,14 @@ const BottomTab = () => {
                 name="Profile"
                 component={ProfileScreen}
                 options={{
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../assets/icons/profile.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
