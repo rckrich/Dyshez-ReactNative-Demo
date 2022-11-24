@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { initializeApp } from 'firebase/app'
@@ -9,6 +9,7 @@ import LandingScreen from './pages/auth/Landing'
 import RegisterScreen from './pages/auth/Register'
 import BottomTab from './components/BottomTab'
 import DrawerNavigator from './components/DrawerNavigator'
+import RestaurantScreen from './pages/Restaurant'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCfVmH8doh8QtGsgYRiggqOZltbMzECXmU',
@@ -64,6 +65,33 @@ const App = () => {
                         name="DrawerNavigator"
                         component={DrawerNavigator}
                         options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="Restaurant"
+                        component={RestaurantScreen}
+                        options={{
+                            headerTitle: () => (
+                                <Image
+                                    style={{
+                                        width: 90,
+                                        height: 37,
+                                        resizeMode: 'contain',
+                                    }}
+                                    source={require('./assets/logo-pink.png')}
+                                />
+                            ),
+                            headerBackImage: () => (
+                                <Image
+                                    style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginLeft: 10,
+                                    }}
+                                    source={require('./assets/icons/back.png')}
+                                />
+                            ),
+                            headerBackTitleVisible: false,
+                        }}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

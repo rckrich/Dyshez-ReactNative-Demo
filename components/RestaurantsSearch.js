@@ -6,8 +6,11 @@ import {
     Text,
     StatusBar,
     Image,
+    TouchableHighlight,
 } from 'react-native'
 import Images from '../utils/imagesIndex'
+import { useNavigation } from '@react-navigation/native'
+import Restaurant from '../pages/Restaurant'
 
 const DATA = [
     {
@@ -42,11 +45,18 @@ const DATA = [
     },
 ]
 
-const RestaurantCard = ({ id }) => (
-    <View style={styles.card}>
-        <Image source={id} resizeMode="contain" />
-    </View>
-)
+const RestaurantCard = ({ id }) => {
+    const navigation = useNavigation()
+    return (
+        <TouchableHighlight
+            onPress={() => navigation.navigate(Restaurant, { id: id })}
+        >
+            <View style={styles.card}>
+                <Image source={id} resizeMode="contain" />
+            </View>
+        </TouchableHighlight>
+    )
+}
 
 const RestaurantsSearch = () => {
     const renderItem = ({ item }) => <RestaurantCard id={item.id} />
