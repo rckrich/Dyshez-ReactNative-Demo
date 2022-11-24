@@ -11,19 +11,17 @@ function RestaurantsScreen() {
     return <FeedCards />
 }
 
-function ProfileScreen() {
-    return (
-        <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
-            <Text>Sección en construcción</Text>
-        </View>
-    )
+function BookmarksScreen() {
+    return <FeedCards />
+}
+
+function HistoryScreen() {
+    return <FeedCards />
 }
 
 const Tab = createMaterialTopTabNavigator()
 
-const FeedTabs = () => {
+const ProfileTabs = () => {
     return (
         <Tab.Navigator
             screenOptions={{
@@ -37,7 +35,7 @@ const FeedTabs = () => {
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={require('../../assets/icons/dishes.png')}
+                            source={require('../../assets/icons/heart.png')}
                             style={{
                                 width: 25,
                                 height: 25,
@@ -65,13 +63,30 @@ const FeedTabs = () => {
                 }}
             />
             <Tab.Screen
-                name="Extra"
-                component={ProfileScreen}
+                name="Bookmarks"
+                component={BookmarksScreen}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={require('../../assets/icons/profile.png')}
+                            source={require('../../assets/icons/bookmark.png')}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
+                        />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="History"
+                component={HistoryScreen}
+                options={{
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused }) => (
+                        <Image
+                            source={require('../../assets/icons/eaten.png')}
                             style={{
                                 width: 25,
                                 height: 25,
@@ -85,4 +100,4 @@ const FeedTabs = () => {
     )
 }
 
-export default FeedTabs
+export default ProfileTabs

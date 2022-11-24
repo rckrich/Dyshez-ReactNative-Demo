@@ -1,33 +1,29 @@
-import React from 'react'
-import { Text, View, Image, StyleSheet } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { Text, View, Image, StyleSheet, ActivityIndicator } from 'react-native'
+import SearchBar from '../components/SearchBar'
+import Address from '../ui/molecules/Address'
+import RestaurantsSearch from '../components/RestaurantsSearch'
+import ProfileTabs from '../ui/molecules/ProfileTabs'
+import ProfileHeader from '../ui/molecules/ProfileHeader'
+import Badges from '../ui/molecules/Badges'
 
-const Profile = () => {
+function Profile() {
     return (
-        <View style={styles.container}>
-            <Image
-                source={require('../assets/icons/profile.png')}
-                style={styles.logo}
-            />
-            <Text style={styles.text}>Profile</Text>
+        <View style={styles.searchContainer}>
+            <ProfileHeader />
+            <Badges />
+            <ProfileTabs />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
+    searchContainer: {
+        backgroundColor: '#fff',
+        paddingVertical: 14,
+        paddingHorizontal: 0,
+        height: '110%',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100%',
-    },
-    logo: {
-        width: 150,
-        height: 150,
-        marginBottom: 20,
-    },
-    text: {
-        fontSize: 30,
-        color: '#d5145a',
     },
 })
 

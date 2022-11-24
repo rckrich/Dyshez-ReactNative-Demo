@@ -34,11 +34,11 @@ const DrawerNavigator = () => {
                         ]}
                     >
                         <Image
-                            style={{ width: 30, height: 30 }}
+                            style={{ width: 32, height: 32 }}
                             source={require('../assets/icons/pink-icon.png')}
                         />
                         <Image
-                            style={{ width: 20, height: 20, marginTop: 5 }}
+                            style={{ width: 28, height: 28 }}
                             source={require('../assets/icons/menu.png')}
                         />
                     </View>
@@ -181,8 +181,12 @@ const DrawerNavigator = () => {
 const styles = StyleSheet.create({
     drawerItem: { borderBottomColor: '#efefef', borderBottomWidth: 2 },
     drawerStyle: { backgroundColor: '#fff' },
-    drawerLabelStyle: { fontSize: 16, color: '#666666', marginVertical: 8 },
-    imageStyle: { width: 20, height: 20, marginLeft: 10 },
+    drawerLabelStyle: {
+        fontSize: 14,
+        color: '#666666',
+        marginVertical: 5,
+    },
+    imageStyle: { width: 18, height: 18, marginLeft: 10 },
 })
 
 export default DrawerNavigator

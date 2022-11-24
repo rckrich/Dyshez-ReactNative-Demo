@@ -24,10 +24,12 @@ const styles = StyleSheet.create({
     searchContainer: {
         backgroundColor: '#fff',
         padding: 14,
+        paddingHorizontal: 8,
     },
     title: {
-        fontWeight: '900',
-        fontSize: 20,
+        fontWeight: '700',
+        fontSize: 19,
+        paddingLeft: 22,
     },
 })
 

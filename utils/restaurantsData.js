@@ -10,6 +10,16 @@ export const searchResponse = [
         id: 'fridays',
     },
     {
+        name: 'Fridays Uptown',
+        type: 'Restaurante',
+        id: 'fridays',
+    },
+    {
+        name: 'Fridays City Center',
+        type: 'Restaurante',
+        id: 'fridays',
+    },
+    {
         name: 'Fuddruckers',
         type: 'Restaurante',
         id: 'fuddruckers',
