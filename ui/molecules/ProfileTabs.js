@@ -23,16 +23,24 @@ const Tab = createMaterialTopTabNavigator()
 
 const ProfileTabs = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={{
+                tabBarIndicatorStyle: { backgroundColor: '#434343' },
+            }}
+        >
             <Tab.Screen
                 name="Dishes"
                 component={DishesScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/heart.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -42,10 +50,14 @@ const ProfileTabs = () => {
                 component={RestaurantsScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/restaurants.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -55,10 +67,14 @@ const ProfileTabs = () => {
                 component={BookmarksScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/bookmark.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}
@@ -68,10 +84,14 @@ const ProfileTabs = () => {
                 component={HistoryScreen}
                 options={{
                     tabBarShowLabel: false,
-                    tabBarIcon: () => (
+                    tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../../assets/icons/eaten.png')}
-                            style={{ width: 25, height: 25 }}
+                            style={{
+                                width: 25,
+                                height: 25,
+                                opacity: focused ? null : 0.5,
+                            }}
                         />
                     ),
                 }}

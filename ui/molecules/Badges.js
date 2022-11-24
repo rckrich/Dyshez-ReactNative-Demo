@@ -7,7 +7,7 @@ const Badges = () => {
             <View style={styles.labels}>
                 <Image
                     style={styles.image}
-                    source={require('../../assets/icons/menu.png')}
+                    source={require('../../assets/icons/pink-dish.png')}
                 />
                 <Text style={styles.bold}>2457 </Text>
                 <Text style={styles.regular}>platillos consumidos</Text>
@@ -15,7 +15,7 @@ const Badges = () => {
             <View style={styles.labels}>
                 <Image
                     style={styles.image}
-                    source={require('../../assets/icons/menu.png')}
+                    source={require('../../assets/icons/visited.png')}
                 />
                 <Text style={styles.bold}>430 </Text>
                 <Text style={styles.regular}>restaurantes visitados</Text>
@@ -23,7 +23,7 @@ const Badges = () => {
             <View style={styles.labels}>
                 <Image
                     style={styles.image}
-                    source={require('../../assets/icons/menu.png')}
+                    source={require('../../assets/icons/chef.png')}
                 />
                 <Text style={styles.regular}>Comenzal de </Text>
                 <Text style={styles.bold}>oro</Text>
@@ -35,28 +35,27 @@ const Badges = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        height: 90,
-        padding: 10,
+        paddingHorizontal: 50,
+        paddingVertical: 5,
         flexDirection: 'column',
-        alignItems: 'flex-start',
     },
     labels: {
-        height: 20,
+        height: 24,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'flex-start',
     },
     image: {
-        width: 15,
-        height: 15,
+        width: 20,
+        height: 20,
         marginRight: 5,
     },
     bold: {
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: '800',
     },
     regular: {
-        fontSize: 18,
+        fontSize: 16,
+        color: '#707070',
     },
 })
 

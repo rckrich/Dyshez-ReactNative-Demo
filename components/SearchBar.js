@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         fontSize: 18,
         height: 37,
+        paddingLeft: 25,
     },
     icon: {
         width: 15,

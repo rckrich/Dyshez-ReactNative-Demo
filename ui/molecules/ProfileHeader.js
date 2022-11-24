@@ -23,25 +23,27 @@ const ProfileHeader = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        height: 90,
-        padding: 20,
+        height: 80,
+        paddingVertical: 20,
+        paddingHorizontal: 5,
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-around',
     },
     image: {
-        width: 80,
-        maxHeight: 80,
+        width: 70,
+        maxHeight: 70,
         borderRadius: 50,
     },
     labels: {
-        paddingLeft: 15,
+        paddingLeft: 0,
     },
     name: {
-        fontSize: 18,
+        fontSize: 14,
         fontWeight: '800',
     },
     email: {
-        fontSize: 14,
+        fontSize: 12,
         color: '#888888',
     },
     icon: {

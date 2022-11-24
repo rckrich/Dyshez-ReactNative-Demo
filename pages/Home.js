@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: '700',
         fontSize: 19,
+        paddingLeft: 22,
     },
 })
 
