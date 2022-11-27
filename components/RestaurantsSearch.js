@@ -14,19 +14,10 @@ import Restaurant from '../pages/Restaurant'
 
 const DATA = [
     {
-        id: Images.restaurants.barrioregio,
+        id: Images.restaurants.roca,
     },
     {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.fuddruckers,
+        id: Images.restaurants.siqueff,
     },
     {
         id: Images.restaurants.ilpiattino,
@@ -38,10 +29,19 @@ const DATA = [
         id: Images.restaurants.orsons,
     },
     {
-        id: Images.restaurants.roca,
+        id: Images.restaurants.fuddruckers,
     },
     {
-        id: Images.restaurants.siqueff,
+        id: Images.restaurants.barrioregio,
+    },
+    {
+        id: Images.restaurants.fridays,
+    },
+    {
+        id: Images.restaurants.bostons,
+    },
+    {
+        id: Images.restaurants.laparroquia,
     },
 ]
 

@@ -8,6 +8,8 @@ export const Images = {
         orsons: require('../assets/restaurants/orsons.png'),
         siqueff: require('../assets/restaurants/siqueff.png'),
         roca: require('../assets/restaurants/roca.png'),
+        laparroquia: require('../assets/restaurants/laparroquia.png'),
+        bostons: require('../assets/restaurants/bostons.png'),
     },
     dishes: {
         pizzapepperoni: require('../assets/dishes/pizzapepperoni.png'),
