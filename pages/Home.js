@@ -16,7 +16,7 @@ function Home() {
 
     return (
         <View style={styles.searchContainer}>
-            <SearchBar />
+            <SearchBar isHome />
             <Address />
             <Text style={styles.title}>Restaurantes Cercanos</Text>
             <RestaurantsSearch />

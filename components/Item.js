@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, TextInput, StyleSheet, Image } from 'react-native'
 import Images from '../utils/imagesIndex'
+import { useFonts } from 'expo-font'
 
 const imageSelect = (id) => {
     if (id === null) return Images.restaurants.other
@@ -30,13 +31,22 @@ const imageSelect = (id) => {
 }
 
 const Item = ({ name, type, id }) => {
+    const [loaded] = useFonts({
+        PoppinsMedium: require('../assets/fonts/PoppinsMedium.ttf'),
+        PoppinsLight: require('../assets/fonts/PoppinsLight.ttf'),
+    })
+
+    if (!loaded) {
+        return null
+    }
+
     return (
         <View style={styles.container}>
             <Image
                 // style={styles.logo}
                 source={imageSelect(id)}
                 style={{
-                    borderRadius: type === 'Restaurante' ? 50 : 11,
+                    borderRadius: type !== 'Platillo' ? 50 : 11,
                     height: 47,
                     width: 47,
                 }}
@@ -67,11 +77,13 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginLeft: 10,
         fontWeight: '600',
+        fontFamily: 'PoppinsMedium',
     },
     type: {
         fontSize: 9,
         marginLeft: 10,
         color: '#7f7f7f',
+        fontFamily: 'PoppinsLight',
     },
     labels: {
         flexDirection: 'column',
