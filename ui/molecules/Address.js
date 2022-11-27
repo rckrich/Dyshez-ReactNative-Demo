@@ -1,7 +1,16 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
+import { useFonts } from 'expo-font'
 
 const Address = () => {
+    const [loaded] = useFonts({
+        PoppinsLight: require('../../assets/fonts/PoppinsLight.ttf'),
+    })
+
+    if (!loaded) {
+        return null
+    }
+
     return (
         <View style={styles.container}>
             <Image
@@ -29,6 +38,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 13,
         color: '#606368',
+        fontFamily: 'PoppinsLight',
     },
 })
 
