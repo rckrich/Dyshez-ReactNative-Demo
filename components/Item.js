@@ -20,6 +20,8 @@ const imageSelect = (id) => {
         burguer: Images.dishes.pizzaburguer,
         burro: Images.dishes.burro,
         torta: Images.dishes.torta,
+        frijolescharros: Images.dishes.burro,
+        frijolconpuerco: Images.dishes.torta,
         profile1: Images.profiles.profile1,
         profile2: Images.profiles.profile2,
         profile3: Images.profiles.profile3,

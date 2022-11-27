@@ -75,6 +75,16 @@ export const searchResponse = [
         type: 'Platillo',
         id: 'torta',
     },
+    {
+        name: 'Frijoles Charros',
+        type: 'Platillo',
+        id: 'frijolescharros',
+    },
+    {
+        name: 'Frijol con puerco',
+        type: 'Platillo',
+        id: 'frijolconpuerco',
+    },
     // Usuarios
     {
         name: 'Eduardo Pizzarro',
@@ -92,12 +102,12 @@ export const searchResponse = [
         id: 'profile3',
     },
     {
-        name: 'Pedro Alcazar',
+        name: 'Elizabeth Frigola',
         type: 'Usuario',
         id: 'profile4',
     },
     {
-        name: 'Eduardo Gomez',
+        name: 'Frida Ku',
         type: 'Usuario',
         id: 'profile5',
     },
