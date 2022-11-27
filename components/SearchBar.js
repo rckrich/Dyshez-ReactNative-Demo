@@ -7,14 +7,16 @@ import {
     Button,
     Text,
     Image,
+    Pressable,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
 import { searchResponse } from '../utils/restaurantsData'
 import RestaurantsSearch from './RestaurantsSearch'
 import Address from '../ui/molecules/Address'
+import { useFonts } from 'expo-font'
 
-const SearchBar = () => {
+const SearchBar = ({ isHome }) => {
     const [searchLabel, setSearchLabel] = useState('')
 
     function filterList(list) {
@@ -23,8 +25,16 @@ const SearchBar = () => {
         )
     }
 
+    const [loaded] = useFonts({
+        PoppinsSemiBold: require('../assets/fonts/PoppinsSemiBold.ttf'),
+    })
+
+    if (!loaded) {
+        return null
+    }
+
     return (
-        <>
+        <View style={{ paddingHorizontal: !isHome ? 8 : 0 }}>
             <View style={styles.searchSection}>
                 <TextInput
                     onChangeText={(search) => setSearchLabel(search)}
@@ -48,9 +58,14 @@ const SearchBar = () => {
                             id={restaurant.id}
                         />
                     ))}
+                    <Pressable style={styles.wrapper}>
+                        <Text style={styles.text}>
+                            Ver todos los resultados
+                        </Text>
+                    </Pressable>
                 </View>
             )}
-        </>
+        </View>
     )
 }
 export default SearchBar
@@ -81,5 +96,18 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: '900',
         fontSize: 20,
+    },
+    wrapper: {
+        borderWidth: 1,
+        borderRadius: 15,
+        height: 60,
+        borderColor: '#f6f6f6',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    text: {
+        color: '#000',
+        fontFamily: 'PoppinsSemiBold',
+        fontSize: 12,
     },
 })

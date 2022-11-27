@@ -10,6 +10,7 @@ import RegisterScreen from './pages/auth/Register'
 import BottomTab from './components/BottomTab'
 import DrawerNavigator from './components/DrawerNavigator'
 import RestaurantScreen from './pages/Restaurant'
+import { useFonts } from 'expo-font'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCfVmH8doh8QtGsgYRiggqOZltbMzECXmU',

@@ -49,6 +49,7 @@ const RestaurantCard = ({ id }) => {
     const navigation = useNavigation()
     return (
         <TouchableHighlight
+            style={styles.touchable}
             onPress={() => navigation.navigate(Restaurant, { id: id })}
         >
             <View style={styles.card}>
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         alignItems: 'center',
         position: 'relative',
-        margin: 5,
+        marginVertical: 5,
         height: 150,
         borderRadius: 15,
     },
@@ -92,6 +93,9 @@ const styles = StyleSheet.create({
         flex: 1,
         maxHeight: '100%',
         width: '100%',
+    },
+    touchable: {
+        width: '50%',
     },
 })
 
