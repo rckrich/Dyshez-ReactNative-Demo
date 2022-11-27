@@ -27,7 +27,7 @@ const FeedTabs = () => {
     return (
         <Tab.Navigator
             screenOptions={{
-                tabBarIndicatorStyle: { backgroundColor: '#434343' },
+                tabBarIndicatorStyle: { backgroundColor: '#B2B2B2' },
             }}
         >
             <Tab.Screen
