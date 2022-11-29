@@ -31,6 +31,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanabowlsalmonwave,
         category: 'Bowls',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     {
         name: 'Bowl Hawaian Bliss',
@@ -38,6 +42,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanabowlhawaianbliss,
         category: 'Bowls Frios',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     {
         name: 'Firecrack Shrimp',
@@ -45,6 +53,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanafirecrackshrimp,
         category: 'Camarón',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     {
         name: 'Hot Cheetos Tuna Wrap',
@@ -52,6 +64,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanahotcheetostunawrap,
         category: 'Wraps',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     {
         name: 'Kahaki de Salmón',
@@ -59,6 +75,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanakahakidesalmon,
         category: 'Barra Fria',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     {
         name: 'Salmón Wrap',
@@ -66,6 +86,10 @@ export const dishes = [
         restaurantId: 'okana',
         imageUrl: Images.dishes.okanasalmonwrap,
         category: 'Barra Caliente',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
     },
     // General
     {

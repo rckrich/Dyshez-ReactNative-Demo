@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import FeedCards from './FeedCards'
 import Images from '../../utils/imagesIndex'
 import CategoryCards from './CategoryCards'
+import ListMenu from './ListMenu'
 
 const restaurants = [
     Images.restaurants.roca,
@@ -26,10 +27,6 @@ const dishes = [
     Images.dishes.okanakahakidesalmon,
     Images.dishes.okanasalmonwrap,
 ]
-
-function RestaurantsScreen() {
-    return <FeedCards data={restaurants} />
-}
 
 function SearchScreen() {
     return <FeedCards data={dishes} />
@@ -73,7 +70,7 @@ const RestaurantTabs = ({ id }) => {
             />
             <Tab.Screen
                 name="Restaurants"
-                component={RestaurantsScreen}
+                children={() => <ListMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
