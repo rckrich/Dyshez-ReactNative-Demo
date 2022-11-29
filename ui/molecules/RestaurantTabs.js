@@ -3,6 +3,7 @@ import { Text, View, Image } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import FeedCards from './FeedCards'
 import Images from '../../utils/imagesIndex'
+import CategoryCards from './CategoryCards'
 
 const restaurants = [
     Images.restaurants.roca,
@@ -26,10 +27,6 @@ const dishes = [
     Images.dishes.okanasalmonwrap,
 ]
 
-function DishesScreen() {
-    return <FeedCards data={dishes} />
-}
-
 function RestaurantsScreen() {
     return <FeedCards data={restaurants} />
 }
@@ -50,7 +47,7 @@ function ProfileScreen() {
 
 const Tab = createMaterialTopTabNavigator()
 
-const RestaurantTabs = () => {
+const RestaurantTabs = ({ id }) => {
     return (
         <Tab.Navigator
             screenOptions={{
@@ -59,7 +56,7 @@ const RestaurantTabs = () => {
         >
             <Tab.Screen
                 name="Dishes"
-                component={DishesScreen}
+                children={() => <CategoryCards id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (

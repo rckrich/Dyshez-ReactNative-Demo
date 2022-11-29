@@ -4,14 +4,19 @@ import RestaurantHeader from '../ui/molecules/RestaurantHeader'
 import RestaurantTabs from '../ui/molecules/RestaurantTabs'
 import BottomTab from '../components/BottomTab'
 import { useNavigation } from '@react-navigation/native'
+import { getRestaurant } from '../utils/restaurantsData'
 
 const Restaurant = ({ route }) => {
-    console.log(route)
+    const restaurant = getRestaurant(route.params.id)
+
     return (
         <View style={styles.container}>
-            <Text>{route.params.id}</Text>
-            <RestaurantHeader />
-            <RestaurantTabs />
+            <RestaurantHeader
+                name={restaurant.name}
+                logo={restaurant.logoUrl}
+                schedule={restaurant.schedule}
+            />
+            <RestaurantTabs id={restaurant.id} />
         </View>
     )
 }

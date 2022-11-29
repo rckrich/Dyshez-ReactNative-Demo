@@ -4,66 +4,80 @@ export const getRestaurants = () => {
     return data.filter((item) => item.type === 'Restaurante')
 }
 
+export const getRestaurant = (id) => {
+    return data.find((item) => item.id === id)
+}
+
 export const data = [
     {
         name: 'Roca',
         type: 'Restaurante',
         id: 'roca',
         logoUrl: Images.restaurants.roca,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Siqueff',
         type: 'Restaurante',
         id: 'siqueff',
         logoUrl: Images.restaurants.siqueff,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Il Piattino',
         type: 'Restaurante',
         id: 'ilpiattino',
         logoUrl: Images.restaurants.ilpiattino,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Okana',
         type: 'Restaurante',
         id: 'okana',
         logoUrl: Images.restaurants.okana,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Orsons',
         type: 'Restaurante',
         id: 'orsons',
         logoUrl: Images.restaurants.orsons,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Fuddruckers',
         type: 'Restaurante',
         id: 'fuddruckers',
         logoUrl: Images.restaurants.fuddruckers,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Barrio Regio',
         type: 'Restaurante',
         id: 'barrioregio',
         logoUrl: Images.restaurants.barrioregio,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Fridays',
         type: 'Restaurante',
         id: 'fridays',
         logoUrl: Images.restaurants.fridays,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'Bostons',
         type: 'Restaurante',
         id: 'bostons',
         logoUrl: Images.restaurants.bostons,
+        schedule: '12:00 - 01:00',
     },
     {
         name: 'La Parroquia',
         type: 'Restaurante',
         id: 'fridays',
         logoUrl: Images.restaurants.laparroquia,
+        schedule: '12:00 - 01:00',
     },
     // Platillos
     {
