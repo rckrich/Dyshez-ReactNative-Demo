@@ -85,6 +85,16 @@ export const searchResponse = [
         type: 'Platillo',
         id: 'frijolconpuerco',
     },
+    {
+        name: 'Bowl Salmon Wave',
+        type: 'Platillo',
+        id: 'okanabowlsalmonwave',
+    },
+    {
+        name: 'Bowl Hawaian Bliss',
+        type: 'Platillo',
+        id: 'okanabowlhawaianbliss',
+    },
     // Usuarios
     {
         name: 'Eduardo Pizzarro',

@@ -6,6 +6,7 @@ import {
     Text,
     StatusBar,
     Image,
+    ImageBackground,
     TouchableHighlight,
 } from 'react-native'
 import Images from '../utils/imagesIndex'
@@ -53,7 +54,13 @@ const RestaurantCard = ({ id }) => {
             onPress={() => navigation.navigate(Restaurant, { id: id })}
         >
             <View style={styles.card}>
-                <Image source={id} resizeMode="contain" />
+                <ImageBackground
+                    source={id}
+                    resizeMode="cover"
+                    style={styles.image}
+                >
+                    <Text></Text>
+                </ImageBackground>
             </View>
         </TouchableHighlight>
     )
@@ -85,17 +92,17 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         alignItems: 'center',
         position: 'relative',
-        marginVertical: 5,
         height: 150,
         borderRadius: 15,
     },
-    image: {
-        flex: 1,
-        maxHeight: '100%',
-        width: '100%',
-    },
     touchable: {
         width: '50%',
+        padding: 2,
+    },
+    image: {
+        flex: 1,
+        justifyContent: 'center',
+        width: '100%',
     },
 })
 

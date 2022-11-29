@@ -6,11 +6,14 @@ import {
     Text,
     StatusBar,
     Image,
+    ImageBackground,
 } from 'react-native'
 
 const RestaurantCard = ({ id }) => (
     <View style={styles.card}>
-        <Image source={id} resizeMode="cover" />
+        <ImageBackground source={id} resizeMode="cover" style={styles.image}>
+            <Text> </Text>
+        </ImageBackground>
     </View>
 )
 
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        maxHeight: '100%',
+        justifyContent: 'center',
         width: '100%',
     },
 })
