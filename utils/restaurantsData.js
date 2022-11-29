@@ -1,53 +1,69 @@
-export const searchResponse = [
-    {
-        name: 'Barrio Regio',
-        type: 'Restaurante',
-        id: 'barrioregio',
-    },
-    {
-        name: 'Fridays',
-        type: 'Restaurante',
-        id: 'fridays',
-    },
-    {
-        name: 'Fridays Uptown',
-        type: 'Restaurante',
-        id: 'fridays',
-    },
-    {
-        name: 'Fridays City Center',
-        type: 'Restaurante',
-        id: 'fridays',
-    },
-    {
-        name: 'Fuddruckers',
-        type: 'Restaurante',
-        id: 'fuddruckers',
-    },
-    {
-        name: 'Il Piattino',
-        type: 'Restaurante',
-        id: 'ilpiattino',
-    },
-    {
-        name: 'Okana',
-        type: 'Restaurante',
-        id: 'okana',
-    },
-    {
-        name: 'Orsons',
-        type: 'Restaurante',
-        id: 'orsons',
-    },
+import Images from './imagesIndex'
+
+export const getRestaurants = () => {
+    return data.filter((item) => item.type === 'Restaurante')
+}
+
+export const data = [
     {
         name: 'Roca',
         type: 'Restaurante',
         id: 'roca',
+        logoUrl: Images.restaurants.roca,
     },
     {
         name: 'Siqueff',
         type: 'Restaurante',
         id: 'siqueff',
+        logoUrl: Images.restaurants.siqueff,
+    },
+    {
+        name: 'Il Piattino',
+        type: 'Restaurante',
+        id: 'ilpiattino',
+        logoUrl: Images.restaurants.ilpiattino,
+    },
+    {
+        name: 'Okana',
+        type: 'Restaurante',
+        id: 'okana',
+        logoUrl: Images.restaurants.okana,
+    },
+    {
+        name: 'Orsons',
+        type: 'Restaurante',
+        id: 'orsons',
+        logoUrl: Images.restaurants.orsons,
+    },
+    {
+        name: 'Fuddruckers',
+        type: 'Restaurante',
+        id: 'fuddruckers',
+        logoUrl: Images.restaurants.fuddruckers,
+    },
+    {
+        name: 'Barrio Regio',
+        type: 'Restaurante',
+        id: 'barrioregio',
+        logoUrl: Images.restaurants.barrioregio,
+    },
+    {
+        name: 'Fridays',
+        type: 'Restaurante',
+        id: 'fridays',
+        logoUrl: Images.restaurants.fridays,
+    },
+    {
+        name: 'Bostons',
+        type: 'Restaurante',
+        id: 'bostons',
+        logoUrl: Images.restaurants.bostons,
+    },
+    {
+        name: 'La Parroquia',
+        type: 'Restaurante',
+        id: 'fridays',
+        logoUrl: Images.restaurants.laparroquia,
     },
     // Platillos
     {

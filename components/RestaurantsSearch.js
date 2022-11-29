@@ -12,50 +12,20 @@ import {
 import Images from '../utils/imagesIndex'
 import { useNavigation } from '@react-navigation/native'
 import Restaurant from '../pages/Restaurant'
+import { getRestaurants } from '../utils/restaurantsData'
 
-const DATA = [
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.siqueff,
-    },
-    {
-        id: Images.restaurants.ilpiattino,
-    },
-    {
-        id: Images.restaurants.okana,
-    },
-    {
-        id: Images.restaurants.orsons,
-    },
-    {
-        id: Images.restaurants.fuddruckers,
-    },
-    {
-        id: Images.restaurants.barrioregio,
-    },
-    {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.bostons,
-    },
-    {
-        id: Images.restaurants.laparroquia,
-    },
-]
+const restaurants = getRestaurants()
 
-const RestaurantCard = ({ id }) => {
+const RestaurantCard = ({ logoUrl, id }) => {
     const navigation = useNavigation()
     return (
         <TouchableHighlight
             style={styles.touchable}
-            onPress={() => navigation.navigate(Restaurant, { id: id })}
+            onPress={() => navigation.navigate('Restaurant', { id: id })}
         >
             <View style={styles.card}>
                 <ImageBackground
-                    source={id}
+                    source={logoUrl}
                     resizeMode="cover"
                     style={styles.image}
                 >
@@ -67,12 +37,14 @@ const RestaurantCard = ({ id }) => {
 }
 
 const RestaurantsSearch = () => {
-    const renderItem = ({ item }) => <RestaurantCard id={item.id} />
+    const renderItem = ({ item }) => (
+        <RestaurantCard logoUrl={item.logoUrl} id={item.id} />
+    )
 
     return (
         <FlatList
             style={styles.container}
-            data={DATA}
+            data={restaurants}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             numColumns={2}
