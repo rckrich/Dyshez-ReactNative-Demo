@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        fontSize: 14,
+        fontSize: 12,
         fontFamily: 'PoppinsMedium',
     },
 })

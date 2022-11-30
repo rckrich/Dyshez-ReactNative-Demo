@@ -8,7 +8,6 @@ const ListMenu = ({ id }) => {
         <View>
             <ScrollableCategories id={id} />
             <ListCards id={id} />
-            <Text>{id}</Text>
         </View>
     )
 }

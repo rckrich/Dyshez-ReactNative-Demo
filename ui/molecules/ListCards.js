@@ -33,7 +33,7 @@ const ListCards = ({ id }) => {
                 </Text>
                 <Image
                     style={styles.image}
-                    source={require('../../assets/icons/back.png')}
+                    source={require('../../assets/icons/next.png')}
                 />
             </View>
             <View style={styles.details}>

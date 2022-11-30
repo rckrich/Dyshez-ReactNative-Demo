@@ -5,42 +5,8 @@ import FeedCards from './FeedCards'
 import Images from '../../utils/imagesIndex'
 import CategoryCards from './CategoryCards'
 import ListMenu from './ListMenu'
-
-const restaurants = [
-    Images.restaurants.roca,
-    Images.restaurants.siqueff,
-    Images.restaurants.ilpiattino,
-    Images.restaurants.okana,
-    Images.restaurants.orsons,
-    Images.restaurants.fuddruckers,
-    Images.restaurants.barrioregio,
-    Images.restaurants.fridays,
-    Images.restaurants.bostons,
-    Images.restaurants.laparroquia,
-]
-
-const dishes = [
-    Images.dishes.okanabowlhawaianbliss,
-    Images.dishes.okanabowlsalmonwave,
-    Images.dishes.okanafirecrackshrimp,
-    Images.dishes.okanahotcheetostunawrap,
-    Images.dishes.okanakahakidesalmon,
-    Images.dishes.okanasalmonwrap,
-]
-
-function SearchScreen() {
-    return <FeedCards data={dishes} />
-}
-
-function ProfileScreen() {
-    return (
-        <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
-            <Text>Sección en construcción</Text>
-        </View>
-    )
-}
+import SquaresMenu from './SquaresMenu'
+import SearchMenu from './SearchMenu'
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -69,7 +35,7 @@ const RestaurantTabs = ({ id }) => {
                 }}
             />
             <Tab.Screen
-                name="Restaurants"
+                name="ListMenu"
                 children={() => <ListMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
@@ -86,8 +52,8 @@ const RestaurantTabs = ({ id }) => {
                 }}
             />
             <Tab.Screen
-                name="Extra"
-                component={ProfileScreen}
+                name="Squares"
+                children={() => <SquaresMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
@@ -104,7 +70,7 @@ const RestaurantTabs = ({ id }) => {
             />
             <Tab.Screen
                 name="Search"
-                component={SearchScreen}
+                children={() => <SearchMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
