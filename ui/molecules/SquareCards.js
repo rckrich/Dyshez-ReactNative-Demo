@@ -7,7 +7,7 @@ import {
     StatusBar,
     Image,
     ImageBackground,
-    Pressable,
+    TouchableHighlight,
 } from 'react-native'
 import { getMenu } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
@@ -16,7 +16,7 @@ const SquareCards = ({ id }) => {
     const dishes = getMenu(id)
 
     const renderItem = ({ item }) => (
-        <View style={styles.card}>
+        <TouchableHighlight style={styles.card} onPress={() => alert(item.id)}>
             <ImageBackground
                 source={item.imageUrl}
                 resizeMode="cover"
@@ -28,7 +28,7 @@ const SquareCards = ({ id }) => {
                     </Text>
                 </View>
             </ImageBackground>
-        </View>
+        </TouchableHighlight>
     )
 
     return (
