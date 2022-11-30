@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
-import { searchResponse } from '../utils/restaurantsData'
+import { data } from '../utils/restaurantsData'
 import RestaurantsSearch from './RestaurantsSearch'
 import Address from '../ui/molecules/Address'
 import { useFonts } from 'expo-font'
@@ -50,7 +50,7 @@ const SearchBar = ({ isHome }) => {
 
             {searchLabel !== '' && (
                 <View>
-                    {filterList(searchResponse).map((restaurant, index) => (
+                    {filterList(data).map((restaurant, index) => (
                         <Item
                             key={index}
                             name={restaurant.name}

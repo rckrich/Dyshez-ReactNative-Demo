@@ -1,19 +1,28 @@
 import * as React from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, Text } from 'react-native'
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
     DrawerItemList,
+    DrawerToggleButton,
 } from '@react-navigation/drawer'
 import HomeScreen from '../pages/Home'
 import BillsScreen from '../pages/Bills'
-
 import BottomTab from './BottomTab'
 import Header from './Header'
+import { useFonts } from 'expo-font'
 
 const Drawer = createDrawerNavigator()
 
 const DrawerNavigator = () => {
+    const [loaded] = useFonts({
+        PoppinsMedium: require('../assets/fonts/PoppinsMedium.ttf'),
+    })
+
+    if (!loaded) {
+        return null
+    }
+
     const DrawerHeaderContent = (props) => {
         return (
             <DrawerContentScrollView contentContainerStyle={{ flex: 1 }}>
@@ -22,6 +31,8 @@ const DrawerNavigator = () => {
                         backgroundColor: '#fff',
                         height: 50,
                         top: -5,
+                        paddingRight: 15,
+                        paddingLeft: 21,
                     }}
                 >
                     <View
@@ -29,18 +40,15 @@ const DrawerNavigator = () => {
                             {
                                 marginTop: 10,
                                 flexDirection: 'row',
-                                justifyContent: 'space-around',
+                                justifyContent: 'space-between',
                             },
                         ]}
                     >
                         <Image
-                            style={{ width: 32, height: 32 }}
+                            style={{ width: 30, height: 30 }}
                             source={require('../assets/icons/pink-icon.png')}
                         />
-                        <Image
-                            style={{ width: 28, height: 28 }}
-                            source={require('../assets/icons/menu.png')}
-                        />
+                        <DrawerToggleButton tintColor="#d5145a" />
                     </View>
                 </View>
                 <DrawerItemList {...props} />
@@ -53,12 +61,11 @@ const DrawerNavigator = () => {
             screenOptions={{
                 drawerStyle: styles.drawerStyle,
                 drawerPosition: 'right',
-                // headerRight: () => (
-                //     <Text onPress={() => navigation.openDrawer()}>Hola</Text>
-                // ),
+                headerRight: () => <DrawerToggleButton tintColor="#d5145a" />,
                 headerTitle: () => <Header />,
                 drawerItemStyle: styles.drawerItem,
                 headerTintColor: '#d5145a',
+                headerLeft: false,
             }}
             drawerContent={DrawerHeaderContent}
         >
@@ -185,6 +192,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#666666',
         marginVertical: 5,
+        fontFamily: 'PoppinsMedium',
     },
     imageStyle: { width: 18, height: 18, marginLeft: 10 },
 })

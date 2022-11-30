@@ -2,32 +2,15 @@ import React from 'react'
 import { Text, View, Image } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import FeedCards from './FeedCards'
-
-function DishesScreen() {
-    return <FeedCards />
-}
-
-function RestaurantsScreen() {
-    return <FeedCards />
-}
-
-function SearchScreen() {
-    return <FeedCards />
-}
-
-function ProfileScreen() {
-    return (
-        <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
-            <Text>Sección en construcción</Text>
-        </View>
-    )
-}
+import Images from '../../utils/imagesIndex'
+import CategoryCards from './CategoryCards'
+import ListMenu from './ListMenu'
+import SquaresMenu from './SquaresMenu'
+import SearchMenu from './SearchMenu'
 
 const Tab = createMaterialTopTabNavigator()
 
-const RestaurantTabs = () => {
+const RestaurantTabs = ({ id }) => {
     return (
         <Tab.Navigator
             screenOptions={{
@@ -36,7 +19,7 @@ const RestaurantTabs = () => {
         >
             <Tab.Screen
                 name="Dishes"
-                component={DishesScreen}
+                children={() => <CategoryCards id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
@@ -52,8 +35,8 @@ const RestaurantTabs = () => {
                 }}
             />
             <Tab.Screen
-                name="Restaurants"
-                component={RestaurantsScreen}
+                name="ListMenu"
+                children={() => <ListMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
@@ -69,8 +52,8 @@ const RestaurantTabs = () => {
                 }}
             />
             <Tab.Screen
-                name="Extra"
-                component={ProfileScreen}
+                name="Squares"
+                children={() => <SquaresMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
@@ -87,7 +70,7 @@ const RestaurantTabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={SearchScreen}
+                children={() => <SearchMenu id={id} />}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (

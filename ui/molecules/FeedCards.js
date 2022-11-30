@@ -6,81 +6,26 @@ import {
     Text,
     StatusBar,
     Image,
+    ImageBackground,
 } from 'react-native'
-import Images from '../../utils/imagesIndex'
-
-const DATA = [
-    {
-        id: Images.restaurants.barrioregio,
-    },
-    {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.fuddruckers,
-    },
-    {
-        id: Images.restaurants.ilpiattino,
-    },
-    {
-        id: Images.restaurants.okana,
-    },
-    {
-        id: Images.restaurants.orsons,
-    },
-    {
-        id: Images.restaurants.okana,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.siqueff,
-    },
-    {
-        id: Images.restaurants.barrioregio,
-    },
-    {
-        id: Images.restaurants.fridays,
-    },
-    {
-        id: Images.restaurants.fuddruckers,
-    },
-    {
-        id: Images.restaurants.ilpiattino,
-    },
-    {
-        id: Images.restaurants.okana,
-    },
-    {
-        id: Images.restaurants.orsons,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-    {
-        id: Images.restaurants.siqueff,
-    },
-    {
-        id: Images.restaurants.roca,
-    },
-]
 
 const RestaurantCard = ({ id }) => (
     <View style={styles.card}>
-        <Image source={id} resizeMode="cover" />
+        <ImageBackground source={id} resizeMode="cover" style={styles.image}>
+            <Text> </Text>
+        </ImageBackground>
     </View>
 )
 
-const FeedCards = () => {
-    const renderItem = ({ item }) => <RestaurantCard id={item.id} />
+const FeedCards = ({ data }) => {
+    const renderItem = ({ item }) => <RestaurantCard id={item} />
 
     return (
         <FlatList
             style={styles.container}
-            data={DATA}
+            data={data}
             renderItem={renderItem}
-            keyExtractor={(item) => item.id}
+            keyExtractor={(item) => item}
             numColumns={3}
             ListFooterComponent={<View />}
             ListFooterComponentStyle={{ height: 30 }}
@@ -99,11 +44,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'relative',
         margin: 1,
-        height: 130,
+        height: 140,
     },
     image: {
         flex: 1,
-        maxHeight: '100%',
+        justifyContent: 'center',
         width: '100%',
     },
 })
