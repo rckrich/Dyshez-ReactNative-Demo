@@ -37,8 +37,8 @@ const ListCards = ({ id }) => {
                 />
             </View>
             <View style={styles.details}>
-                <Text style={styles.callories}>430 cal</Text>
-                <Text style={styles.price}>$150.50</Text>
+                <Text style={styles.callories}>{item.callories}</Text>
+                <Text style={styles.price}>${item.price.toFixed(2)}</Text>
             </View>
         </View>
     )
@@ -48,7 +48,7 @@ const ListCards = ({ id }) => {
             contentContainerStyle={styles.container}
             data={dishes}
             renderItem={renderItem}
-            keyExtractor={(item) => item}
+            keyExtractor={(item) => item.id}
             ListFooterComponent={<View />}
             ListFooterComponentStyle={{ height: 50 }}
         />

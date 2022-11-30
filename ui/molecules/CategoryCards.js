@@ -44,7 +44,7 @@ const CategoryCards = ({ id }) => {
             style={styles.container}
             data={categories}
             renderItem={renderItem}
-            keyExtractor={(item) => item}
+            keyExtractor={(item) => item.id}
             numColumns={3}
             ListFooterComponent={<View />}
             ListFooterComponentStyle={{ height: 30 }}
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         margin: 1,
         height: 140,
+        maxWidth: '33%',
     },
     image: {
         flex: 1,
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        fontSize: 12,
+        fontSize: 10,
         fontFamily: 'PoppinsMedium',
     },
 })

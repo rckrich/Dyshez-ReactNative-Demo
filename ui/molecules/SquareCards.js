@@ -24,7 +24,7 @@ const SquareCards = ({ id }) => {
             >
                 <View style={styles.wrapper}>
                     <Text style={styles.text}>
-                        {item.name} ${item.price}
+                        {item.name} ${item.price.toFixed(2)}
                     </Text>
                 </View>
             </ImageBackground>
@@ -36,7 +36,7 @@ const SquareCards = ({ id }) => {
             contentContainerStyle={styles.container}
             data={dishes}
             renderItem={renderItem}
-            keyExtractor={(item) => item}
+            keyExtractor={(item) => item.id}
             ListFooterComponent={<View />}
             ListFooterComponentStyle={{ height: 100 }}
             numColumns={2}
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         margin: 1,
         height: 180,
+        maxWidth: '49%',
     },
     wrapper: {
         backgroundColor: '#000',
