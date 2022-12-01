@@ -23,6 +23,10 @@ export const getMenuCategories = (id) => {
     return helper
 }
 
+export const getDish = (id) => {
+    return dishes.find((item) => item.id === id)
+}
+
 export const dishes = [
     // Okana
     {
@@ -102,6 +106,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Camarones al Ajillo',
@@ -113,6 +123,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Ensalada de Tomate',
@@ -124,6 +140,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Fettuccini Alfredo',
@@ -135,6 +157,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Tomahawk de la Casa',
@@ -146,6 +174,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Papas al Horno',
@@ -157,6 +191,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     {
         name: 'Cerveza Artesanal',
@@ -168,6 +208,12 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     // General
     {

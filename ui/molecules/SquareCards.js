@@ -11,12 +11,18 @@ import {
 } from 'react-native'
 import { getMenu } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
+import { useNavigation } from '@react-navigation/native'
+import Dish from '../../pages/Dish'
 
 const SquareCards = ({ id }) => {
+    const navigation = useNavigation()
     const dishes = getMenu(id)
 
     const renderItem = ({ item }) => (
-        <TouchableHighlight style={styles.card} onPress={() => alert(item.id)}>
+        <TouchableHighlight
+            style={styles.card}
+            onPress={() => navigation.navigate('Dish', { id: item.id })}
+        >
             <ImageBackground
                 source={item.imageUrl}
                 resizeMode="cover"
