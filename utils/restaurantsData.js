@@ -59,7 +59,21 @@ export const data = [
         schedule: '12:00 - 01:00',
     },
     {
-        name: 'Fridays',
+        name: 'Fridays City Center',
+        type: 'Restaurante',
+        id: 'fridays',
+        logoUrl: Images.restaurants.fridays,
+        schedule: '12:00 - 01:00',
+    },
+    {
+        name: 'Fridays Uptown',
+        type: 'Restaurante',
+        id: 'fridays',
+        logoUrl: Images.restaurants.fridays,
+        schedule: '12:00 - 01:00',
+    },
+    {
+        name: 'Fridays Foro GNP',
         type: 'Restaurante',
         id: 'fridays',
         logoUrl: Images.restaurants.fridays,

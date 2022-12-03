@@ -27,7 +27,7 @@ const RestaurantCard = ({ category, imageUrl }) => (
 
 const CategoryCards = ({ id }) => {
     const [loaded] = useFonts({
-        PoppinsMedium: require('../../assets/fonts/PoppinsMedium.ttf'),
+        PoppinsRegular: require('../../assets/fonts/PoppinsRegular.ttf'),
     })
 
     if (!loaded) {
@@ -68,23 +68,23 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        justifyContent: 'center',
         width: '100%',
     },
     wrapper: {
         backgroundColor: '#fff',
         color: '#000',
+        marginTop: '80%',
         maxWidth: '70%',
-        marginTop: '50%',
         borderTopRightRadius: 15,
         borderBottomRightRadius: 15,
         minHeight: 25,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'left',
     },
     text: {
-        fontSize: 10,
-        fontFamily: 'PoppinsMedium',
+        fontSize: 12,
+        fontFamily: 'PoppinsRegular',
+        paddingRight: 5,
     },
 })
 

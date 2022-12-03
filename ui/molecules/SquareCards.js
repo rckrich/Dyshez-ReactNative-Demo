@@ -18,6 +18,14 @@ const SquareCards = ({ id }) => {
     const navigation = useNavigation()
     const dishes = getMenu(id)
 
+    const [loaded] = useFonts({
+        PoppinsRegular: require('../../assets/fonts/PoppinsRegular.ttf'),
+    })
+
+    if (!loaded) {
+        return null
+    }
+
     const renderItem = ({ item }) => (
         <TouchableHighlight
             style={styles.card}
@@ -28,10 +36,13 @@ const SquareCards = ({ id }) => {
                 resizeMode="cover"
                 style={styles.image}
             >
-                <View style={styles.wrapper}>
-                    <Text style={styles.text}>
-                        {item.name} ${item.price.toFixed(2)}
+                <View style={styles.wrapperTitle}>
+                    <Text numberOfLines={1} style={styles.text}>
+                        {item.name}
                     </Text>
+                </View>
+                <View style={styles.wrapperPrice}>
+                    <Text style={styles.text}>${item.price.toFixed(2)}</Text>
                 </View>
             </ImageBackground>
         </TouchableHighlight>
@@ -63,17 +74,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'relative',
         margin: 1,
-        height: 180,
+        height: 194,
         maxWidth: '49%',
     },
-    wrapper: {
+    wrapperTitle: {
         backgroundColor: '#000',
         color: '#fff',
         maxWidth: '100%',
-        padding: 5,
         borderTopLeftRadius: 15,
         borderBottomLeftRadius: 15,
-        minHeight: 25,
+        paddingHorizontal: 5,
+        height: 15,
+        alignItems: 'center',
+        position: 'absolute',
+        right: 0,
+        bottom: 32,
+    },
+    wrapperPrice: {
+        backgroundColor: '#000',
+        color: '#fff',
+        maxWidth: '100%',
+        borderTopLeftRadius: 15,
+        borderBottomLeftRadius: 15,
+        height: 15,
+        paddingHorizontal: 5,
         alignItems: 'center',
         position: 'absolute',
         right: 0,
@@ -81,7 +105,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 10,
-        fontFamily: 'PoppinsMedium',
+        fontFamily: 'PoppinsRegular',
         color: '#fff',
         maxWidth: 200,
     },
