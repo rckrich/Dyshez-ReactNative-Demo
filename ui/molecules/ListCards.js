@@ -16,7 +16,7 @@ const ListCards = ({ id }) => {
     const dishes = getMenu(id)
 
     const [loaded] = useFonts({
-        PoppinsSemiBold: require('../../assets/fonts/PoppinsSemiBold.ttf'),
+        PoppinsSemiBoldItalic: require('../../assets/fonts/PoppinsSemiBoldItalic.ttf'),
         PoppinsMedium: require('../../assets/fonts/PoppinsMedium.ttf'),
     })
 
@@ -37,8 +37,8 @@ const ListCards = ({ id }) => {
                 />
             </View>
             <View style={styles.details}>
-                <Text style={styles.callories}>430 cal</Text>
-                <Text style={styles.price}>$150.50</Text>
+                <Text style={styles.callories}>{item.callories}</Text>
+                <Text style={styles.price}>${item.price.toFixed(2)}</Text>
             </View>
         </View>
     )
@@ -48,7 +48,7 @@ const ListCards = ({ id }) => {
             contentContainerStyle={styles.container}
             data={dishes}
             renderItem={renderItem}
-            keyExtractor={(item) => item}
+            keyExtractor={(item) => item.id}
             ListFooterComponent={<View />}
             ListFooterComponentStyle={{ height: 50 }}
         />
@@ -71,20 +71,20 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        fontFamily: 'PoppinsSemiBold',
+        fontFamily: 'PoppinsSemiBoldItalic',
         marginBottom: 5,
     },
     description: {
         fontSize: 12,
-        width: '88%',
+        width: '87%',
         textAlign: 'center',
         fontFamily: 'PoppinsMedium',
         color: '#a1a1a1',
         justifyContent: 'center',
     },
     image: {
-        width: 20,
-        height: 20,
+        width: 25,
+        height: 25,
         resizeMode: 'contain',
         paddingLeft: 5,
     },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         width: 300,
         borderBottomWidth: 2,
-        borderBottomColor: '#a1a1a1',
+        borderBottomColor: '#dddddd',
     },
     callories: {
         marginHorizontal: 10,

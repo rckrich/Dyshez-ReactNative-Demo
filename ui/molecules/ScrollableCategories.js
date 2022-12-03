@@ -52,9 +52,11 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         padding: 8,
         borderRadius: 10,
+        height: 39,
+        justifyContent: 'center',
     },
     text: {
-        fontSize: 12,
+        fontSize: 14,
         fontFamily: 'PoppinsSemiBold',
     },
 })

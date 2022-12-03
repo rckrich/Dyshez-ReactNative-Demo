@@ -23,6 +23,14 @@ export const Images = {
         okanahotcheetostunawrap: require('../assets/dishes/okana/hotcheetostunawrap.png'),
         okanakahakidesalmon: require('../assets/dishes/okana/kahakidesalmon.png'),
         okanasalmonwrap: require('../assets/dishes/okana/salmonwrap.png'),
+        // Roca
+        rocaboneless: require('../assets/dishes/roca/test1.png'),
+        rocacamaronesalajillo: require('../assets/dishes/roca/test2.png'),
+        rocaensaladadetomate: require('../assets/dishes/roca/test1.png'),
+        rocafettuccinialfredo: require('../assets/dishes/roca/test3.png'),
+        rocatomahawkdelacasa: require('../assets/dishes/roca/test4.png'),
+        rocapapasalhorno: require('../assets/dishes/roca/test1.png'),
+        rocacervezaartesanal: require('../assets/dishes/roca/test2.png'),
     },
     profiles: {
         profile1: require('../assets/profiles/profile1.png'),

@@ -45,7 +45,7 @@ const DrawerNavigator = () => {
                         ]}
                     >
                         <Image
-                            style={{ width: 30, height: 30 }}
+                            style={{ width: 30, height: 30, marginLeft: 15 }}
                             source={require('../assets/icons/pink-icon.png')}
                         />
                         <DrawerToggleButton tintColor="#d5145a" />
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         fontFamily: 'PoppinsMedium',
     },
-    imageStyle: { width: 18, height: 18, marginLeft: 10 },
+    imageStyle: { width: 18, height: 18, marginLeft: 23 },
 })
 
 export default DrawerNavigator

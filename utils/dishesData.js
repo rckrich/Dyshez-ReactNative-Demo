@@ -23,6 +23,10 @@ export const getMenuCategories = (id) => {
     return helper
 }
 
+export const getDish = (id) => {
+    return dishes.find((item) => item.id === id)
+}
+
 export const dishes = [
     // Okana
     {
@@ -90,6 +94,126 @@ export const dishes = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         callories: 200,
         price: 150.5,
+    },
+    // Roca
+    {
+        name: 'Boneless',
+        id: 'rocaboneless',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocaboneless,
+        category: 'Entradas',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Camarones al Ajillo',
+        id: 'rocacamaronesalajillo',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocacamaronesalajillo,
+        category: 'Especialidades',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Ensalada de Tomate',
+        id: 'rocaensaladadetomate',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocaensaladadetomate,
+        category: 'Ensaladas y Sopas',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Fettuccini Alfredo',
+        id: 'rocafettuccinialfredo',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocafettuccinialfredo,
+        category: 'Risottos y Pastas',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Tomahawk de la Casa',
+        id: 'rocatomahawkdelacasa',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocatomahawkdelacasa,
+        category: 'Cortes Prime',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Papas al Horno',
+        id: 'rocapapasalhorno',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocapapasalhorno,
+        category: 'Guarniciones',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Cerveza Artesanal',
+        id: 'rocacervezaartesanal',
+        restaurantId: 'roca',
+        imageUrl: Images.dishes.rocacervezaartesanal,
+        category: 'Bebidas',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        callories: 200,
+        price: 150.5,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
     },
     // General
     {
