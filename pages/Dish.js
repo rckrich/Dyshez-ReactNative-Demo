@@ -10,7 +10,12 @@ const Dish = ({ route }) => {
     return (
         <View>
             <Slider id={dish.id} images={dish.images} />
-            <DishDescription name={dish.name} description={dish.description} />
+            <DishDescription
+                name={dish.name}
+                description={dish.description}
+                price={dish.price}
+                callories={dish.callories}
+            />
         </View>
     )
 }
