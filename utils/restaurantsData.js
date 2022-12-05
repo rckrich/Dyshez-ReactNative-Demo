@@ -15,6 +15,12 @@ export const data = [
         id: 'roca',
         logoUrl: Images.restaurants.roca,
         schedule: '12:00 - 01:00',
+        description:
+            'Con una original combinación entre clásico y lo contemporáneo, ROCA Steakhouse es un inigualable restaurante gourmet en Mérida, Yucatán, ideal para los amantes de los cortes de carne prime.',
+        address:
+            'Av. Andrés García Lavin, Montebello, Luxury Place, Local-5, Mérida, Mexico',
+        phone: '9999-99-99-99',
+        url: 'https://www.rocasteakhouse.com/',
     },
     {
         name: 'Siqueff',
@@ -22,6 +28,12 @@ export const data = [
         id: 'siqueff',
         logoUrl: Images.restaurants.siqueff,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Il Piattino',
@@ -29,6 +41,12 @@ export const data = [
         id: 'ilpiattino',
         logoUrl: Images.restaurants.ilpiattino,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Okana',
@@ -36,6 +54,12 @@ export const data = [
         id: 'okana',
         logoUrl: Images.restaurants.okana,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Orsons',
@@ -43,6 +67,12 @@ export const data = [
         id: 'orsons',
         logoUrl: Images.restaurants.orsons,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Fuddruckers',
@@ -50,6 +80,12 @@ export const data = [
         id: 'fuddruckers',
         logoUrl: Images.restaurants.fuddruckers,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Barrio Regio',
@@ -57,6 +93,12 @@ export const data = [
         id: 'barrioregio',
         logoUrl: Images.restaurants.barrioregio,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Fridays City Center',
@@ -64,6 +106,12 @@ export const data = [
         id: 'fridays',
         logoUrl: Images.restaurants.fridays,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Fridays Uptown',
@@ -71,6 +119,12 @@ export const data = [
         id: 'fridays',
         logoUrl: Images.restaurants.fridays,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Fridays Foro GNP',
@@ -78,6 +132,12 @@ export const data = [
         id: 'fridays',
         logoUrl: Images.restaurants.fridays,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'Bostons',
@@ -85,6 +145,12 @@ export const data = [
         id: 'bostons',
         logoUrl: Images.restaurants.bostons,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     {
         name: 'La Parroquia',
@@ -92,6 +158,12 @@ export const data = [
         id: 'fridays',
         logoUrl: Images.restaurants.laparroquia,
         schedule: '12:00 - 01:00',
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        address:
+            'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
+        phone: '9999-99-99-99',
+        url: 'www.google.com',
     },
     // Platillos
     {
