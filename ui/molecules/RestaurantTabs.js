@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View, Image } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import FeedCards from './FeedCards'
@@ -11,6 +11,7 @@ import SearchMenu from './SearchMenu'
 const Tab = createMaterialTopTabNavigator()
 
 const RestaurantTabs = ({ id }) => {
+    const [filteredDishes, setFilteredDishes] = useState([])
     return (
         <Tab.Navigator
             screenOptions={{
@@ -53,7 +54,13 @@ const RestaurantTabs = ({ id }) => {
             />
             <Tab.Screen
                 name="Squares"
-                children={() => <SquaresMenu id={id} />}
+                children={() => (
+                    <SquaresMenu
+                        id={id}
+                        setFilteredDishes={setFilteredDishes}
+                        filteredDishes={filteredDishes}
+                    />
+                )}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (

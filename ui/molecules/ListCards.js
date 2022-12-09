@@ -8,11 +8,14 @@ import {
     Image,
     ImageBackground,
     Pressable,
+    TouchableHighlight,
 } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { getMenu } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
 
 const ListCards = ({ id }) => {
+    const navigation = useNavigation()
     const dishes = getMenu(id)
 
     const [loaded] = useFonts({
@@ -31,13 +34,18 @@ const ListCards = ({ id }) => {
                 <Text style={styles.description} numberOfLines={2}>
                     {item.description}
                 </Text>
-                <Image
-                    style={styles.image}
-                    source={require('../../assets/icons/next.png')}
-                />
+                <TouchableHighlight
+                    underlayColor="transparent"
+                    onPress={() => navigation.navigate('Dish', { id: item.id })}
+                >
+                    <Image
+                        style={styles.image}
+                        source={require('../../assets/icons/next.png')}
+                    />
+                </TouchableHighlight>
             </View>
             <View style={styles.details}>
-                <Text style={styles.callories}>{item.callories}</Text>
+                <Text style={styles.callories}>{item.callories} KCal</Text>
                 <Text style={styles.price}>${item.price.toFixed(2)}</Text>
             </View>
         </View>

@@ -23,6 +23,12 @@ export const getMenuCategories = (id) => {
     return helper
 }
 
+export const filterMenu = (id, category) => {
+    const dishes = getMenu(id)
+    const dishesToShow = dishes.filter((dish) => dish.category === category)
+    return dishesToShow
+}
+
 export const getDish = (id) => {
     return dishes.find((item) => item.id === id)
 }
