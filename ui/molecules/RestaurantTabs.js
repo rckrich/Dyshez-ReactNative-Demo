@@ -37,7 +37,13 @@ const RestaurantTabs = ({ id }) => {
             />
             <Tab.Screen
                 name="ListMenu"
-                children={() => <ListMenu id={id} />}
+                children={() => (
+                    <ListMenu
+                        id={id}
+                        setFilteredDishes={setFilteredDishes}
+                        filteredDishes={filteredDishes}
+                    />
+                )}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
