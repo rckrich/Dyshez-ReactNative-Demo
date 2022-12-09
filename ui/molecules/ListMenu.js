@@ -3,11 +3,14 @@ import { View, FlatList, StyleSheet, Text } from 'react-native'
 import ScrollableCategories from './ScrollableCategories'
 import ListCards from './ListCards'
 
-const ListMenu = ({ id }) => {
+const ListMenu = ({ id, setFilteredDishes, filteredDishes }) => {
     return (
         <View>
-            <ScrollableCategories id={id} />
-            <ListCards id={id} />
+            <ScrollableCategories
+                id={id}
+                setFilteredDishes={setFilteredDishes}
+            />
+            <ListCards id={id} filteredDishes={filteredDishes} />
         </View>
     )
 }

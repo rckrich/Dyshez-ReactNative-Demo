@@ -26,7 +26,7 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
         <View style={styles.container}>
             <View style={styles.row}>
                 <Image
-                    source={require('../../assets/icons/heart.png')}
+                    source={require('../../assets/icons/list.png')}
                     style={styles.icon}
                 />
                 <Text
@@ -44,14 +44,14 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
             </View>
             <View style={styles.row}>
                 <Image
-                    source={require('../../assets/icons/heart.png')}
-                    style={styles.icon}
+                    source={require('../../assets/icons/direction.png')}
+                    style={{ width: 20, height: 23, marginRight: 10 }}
                 />
                 <Text style={styles.text}>{address}</Text>
             </View>
             <View style={styles.row}>
                 <Image
-                    source={require('../../assets/icons/heart.png')}
+                    source={require('../../assets/icons/pinkclock.png')}
                     style={styles.icon}
                 />
 
@@ -85,7 +85,7 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
             </View>
             <View style={styles.row}>
                 <Image
-                    source={require('../../assets/icons/heart.png')}
+                    source={require('../../assets/icons/pinkphone.png')}
                     style={styles.icon}
                 />
                 <Text numberOfLines={2} style={styles.text}>
@@ -94,7 +94,7 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
             </View>
             <View style={styles.row}>
                 <Image
-                    source={require('../../assets/icons/heart.png')}
+                    source={require('../../assets/icons/web.png')}
                     style={styles.icon}
                 />
                 <Text numberOfLines={2} style={styles.text}>

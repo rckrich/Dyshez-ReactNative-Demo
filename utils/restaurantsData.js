@@ -21,6 +21,7 @@ export const data = [
             'Av. Andrés García Lavin, Montebello, Luxury Place, Local-5, Mérida, Mexico',
         phone: '9999-99-99-99',
         url: 'https://www.rocasteakhouse.com/',
+        isActive: true,
     },
     {
         name: 'Siqueff',
@@ -34,6 +35,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Il Piattino',
@@ -47,6 +49,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Okana',
@@ -60,6 +63,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: true,
     },
     {
         name: 'Orsons',
@@ -73,6 +77,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Fuddruckers',
@@ -86,6 +91,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Barrio Regio',
@@ -99,6 +105,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Fridays City Center',
@@ -112,6 +119,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Fridays Uptown',
@@ -125,6 +133,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Fridays Foro GNP',
@@ -138,6 +147,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'Bostons',
@@ -151,6 +161,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     {
         name: 'La Parroquia',
@@ -164,6 +175,7 @@ export const data = [
             'Calle 50 No. 482 x Calle 31 y Calle 31-A, C. 31ᴬ, Gonzalo Guerrero, 97118 Mérida, Yuc.',
         phone: '9999-99-99-99',
         url: 'www.google.com',
+        isActive: false,
     },
     // Platillos
     {

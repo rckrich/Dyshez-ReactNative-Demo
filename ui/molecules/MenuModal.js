@@ -13,14 +13,11 @@ import {
 } from 'react-native'
 import { useFonts } from 'expo-font'
 
-const BottomModal = ({
-    modalVisible,
-    setIsBottomModalVisible,
-    handleMenuModal,
-}) => {
+const MenuModal = ({ modalVisible, handleMenuModal }) => {
     const [loaded] = useFonts({
-        PoppinsBold: require('../../assets/fonts/PoppinsBold.ttf'),
+        PoppinsMedium: require('../../assets/fonts/PoppinsMedium.ttf'),
         PoppinsRegular: require('../../assets/fonts/PoppinsRegular.ttf'),
+        PoppinsBold: require('../../assets/fonts/PoppinsBold.ttf'),
     })
 
     if (!loaded) {
@@ -31,27 +28,29 @@ const BottomModal = ({
             animationType="slide"
             transparent={true}
             visible={modalVisible}
-            onRequestClose={setIsBottomModalVisible}
+            onRequestClose={handleMenuModal}
         >
-            <TouchableWithoutFeedback onPress={setIsBottomModalVisible}>
+            <TouchableWithoutFeedback onPress={handleMenuModal}>
                 <View style={styles.modalOverlay} />
             </TouchableWithoutFeedback>
             <View style={styles.container}>
-                <Text style={styles.title}>Opciones del restaurante</Text>
-                <View style={styles.buttons}>
+                <Text style={styles.title}>Menús Disponibles</Text>
+                <View>
+                    <Text style={styles.header}>Menús Dyshez</Text>
                     <Pressable style={styles.button}>
-                        <Image
-                            source={require('../../assets/icons/share.png')}
-                            style={styles.icon}
-                        />
-                        <Text style={styles.text}>Compartir</Text>
+                        <Text style={styles.text}>Menú Desayunos</Text>
                     </Pressable>
-                    <Pressable style={styles.button} onPress={handleMenuModal}>
-                        <Image
-                            source={require('../../assets/icons/restaurant-menu.png')}
-                            style={styles.icon}
-                        />
-                        <Text style={styles.text}>Ver menús</Text>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.text}>Menú Comidas</Text>
+                    </Pressable>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.text}>Menú Cenas</Text>
+                    </Pressable>
+                </View>
+                <View>
+                    <Text style={styles.header}>Menús Dyshez</Text>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.text}>Ver PDF</Text>
                     </Pressable>
                 </View>
             </View>
@@ -70,27 +69,23 @@ const styles = StyleSheet.create({
     },
     container: {
         backgroundColor: '#fff',
-        height: 250,
+        height: 420,
         marginTop: 'auto',
         borderRadius: 25,
-        paddingHorizontal: 50,
+        paddingHorizontal: 100,
         paddingVertical: 30,
         alignItems: 'center',
     },
-    buttons: {
-        flexDirection: 'row',
-        marginTop: 30,
-    },
     button: {
-        height: 85,
-        width: 165,
+        height: 48,
+        width: 294,
         borderColor: '#CCCCCC',
         borderWidth: 1,
-        alignItems: 'center',
         justifyContent: 'center',
         padding: 10,
         marginHorizontal: 5,
         borderRadius: 10,
+        marginVertical: 5,
     },
     icon: {
         height: 25,
@@ -100,11 +95,18 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'PoppinsBold',
         fontSize: 13,
+        marginBottom: 10,
     },
     text: {
         fontFamily: 'PoppinsRegular',
         fontSize: 12,
     },
+    header: {
+        fontFamily: 'PoppinsMedium',
+        color: '#D4145A',
+        paddingLeft: 8,
+        marginTop: 5,
+    },
 })
 
-export default BottomModal
+export default MenuModal

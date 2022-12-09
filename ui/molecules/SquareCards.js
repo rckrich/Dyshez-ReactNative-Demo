@@ -14,7 +14,7 @@ import { useFonts } from 'expo-font'
 import { useNavigation } from '@react-navigation/native'
 import Dish from '../../pages/Dish'
 
-const SquareCards = ({ id }) => {
+const SquareCards = ({ id, filteredDishes }) => {
     const navigation = useNavigation()
     const dishes = getMenu(id)
 
@@ -51,7 +51,7 @@ const SquareCards = ({ id }) => {
     return (
         <FlatList
             contentContainerStyle={styles.container}
-            data={dishes}
+            data={filteredDishes?.length > 0 ? filteredDishes : dishes}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             ListFooterComponent={<View />}

@@ -7,12 +7,17 @@ import {
     StatusBar,
     Image,
     ImageBackground,
+    TouchableHighlight,
 } from 'react-native'
 import { getMenuCategories } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
+import { useNavigation } from '@react-navigation/native'
 
-const RestaurantCard = ({ category, imageUrl }) => (
-    <View style={styles.card}>
+const RestaurantCard = ({ category, imageUrl, navigation }) => (
+    <TouchableHighlight
+        style={styles.card}
+        onPress={() => navigation.jumpTo('Squares')}
+    >
         <ImageBackground
             source={imageUrl}
             resizeMode="cover"
@@ -22,10 +27,11 @@ const RestaurantCard = ({ category, imageUrl }) => (
                 <Text style={styles.text}>{category}</Text>
             </View>
         </ImageBackground>
-    </View>
+    </TouchableHighlight>
 )
 
 const CategoryCards = ({ id }) => {
+    const navigation = useNavigation()
     const [loaded] = useFonts({
         PoppinsRegular: require('../../assets/fonts/PoppinsRegular.ttf'),
     })
@@ -35,7 +41,11 @@ const CategoryCards = ({ id }) => {
     }
 
     const renderItem = ({ item }) => (
-        <RestaurantCard category={item.category} imageUrl={item.imageUrl} />
+        <RestaurantCard
+            category={item.category}
+            imageUrl={item.imageUrl}
+            navigation={navigation}
+        />
     )
     const categories = getMenuCategories(id)
 
