@@ -17,7 +17,7 @@ const RestaurantTabs = ({ id }) => {
     const [categorySelected, setCategorySelected] = useState(null)
 
     const handleCategorySelect = (category) => {
-        if (!isFiltered) {
+        if (category !== categorySelected) {
             const helper = filterMenu(id, category)
             setFilteredDishes(helper)
             setIsFiltered(true)
