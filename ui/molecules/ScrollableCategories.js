@@ -14,23 +14,12 @@ import { getMenuCategories } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
 import { filterMenu } from '../../utils/dishesData'
 
-const ScrollableCategories = ({ id, setFilteredDishes }) => {
+const ScrollableCategories = ({
+    id,
+    handleCategorySelect,
+    categorySelected,
+}) => {
     const categories = getMenuCategories(id)
-    const [isFiltered, setIsFiltered] = useState(false)
-    const [categorySelected, setCategorySelected] = useState(null)
-
-    const handleCategorySelect = (category) => {
-        if (!isFiltered) {
-            const helper = filterMenu(id, category)
-            setFilteredDishes(helper)
-            setIsFiltered(true)
-            setCategorySelected(category)
-        } else {
-            setFilteredDishes([])
-            setIsFiltered(false)
-            setCategorySelected(null)
-        }
-    }
 
     const renderItem = ({ item }) => (
         <View>
@@ -98,6 +87,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingHorizontal: 4,
         justifyContent: 'center',
+        height: 38,
     },
     text: {
         fontSize: 14,
