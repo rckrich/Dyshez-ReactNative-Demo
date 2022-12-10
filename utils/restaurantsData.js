@@ -10,7 +10,7 @@ export const getRestaurant = (id) => {
 
 export const data = [
     {
-        name: 'Roca',
+        name: 'Roca Steakhouse',
         type: 'Restaurante',
         id: 'roca',
         logoUrl: Images.restaurants.roca,
@@ -22,6 +22,8 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'https://www.rocasteakhouse.com/',
         isActive: true,
+
+        isCopy: false,
     },
     {
         name: 'Siqueff',
@@ -36,6 +38,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Il Piattino',
@@ -50,6 +53,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Okana',
@@ -64,6 +68,8 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: true,
+
+        isCopy: false,
     },
     {
         name: 'Orsons',
@@ -78,6 +84,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Fuddruckers',
@@ -92,6 +99,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Barrio Regio',
@@ -106,12 +114,13 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Fridays City Center',
         type: 'Restaurante',
         id: 'fridays',
-        logoUrl: Images.restaurants.fridays,
+        logoUrl: Images.restaurants.fridayscity,
         schedule: '12:00 - 01:00',
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -120,12 +129,13 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'Fridays Uptown',
         type: 'Restaurante',
         id: 'fridays',
-        logoUrl: Images.restaurants.fridays,
+        logoUrl: Images.restaurants.fridaysuptown,
         schedule: '12:00 - 01:00',
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -134,12 +144,13 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: true,
     },
     {
         name: 'Fridays Foro GNP',
         type: 'Restaurante',
         id: 'fridays',
-        logoUrl: Images.restaurants.fridays,
+        logoUrl: Images.restaurants.fridaysgnp,
         schedule: '12:00 - 01:00',
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -148,6 +159,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: true,
     },
     {
         name: 'Bostons',
@@ -162,6 +174,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     {
         name: 'La Parroquia',
@@ -176,6 +189,7 @@ export const data = [
         phone: '9999-99-99-99',
         url: 'www.google.com',
         isActive: false,
+        isCopy: false,
     },
     // Platillos
     {
