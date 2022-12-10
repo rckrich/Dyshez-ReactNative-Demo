@@ -1,10 +1,26 @@
 import React, { useState } from 'react'
-import { Text, View, Image, StyleSheet, Button } from 'react-native'
+import {
+    Text,
+    View,
+    Image,
+    StyleSheet,
+    Button,
+    Pressable,
+    Linking,
+} from 'react-native'
 import { useFonts } from 'expo-font'
 
 const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
     const [isFullText, setIsFullText] = useState(false)
     const [isFullSchedule, setIsFullSchedule] = useState(false)
+
+    const handleLocationClick = () => {
+        Linking.openURL(url)
+    }
+
+    const handlePhoneClick = () => {
+        Linking.openURL(`tel:${phone}`)
+    }
 
     const toggleNumberOfLines = () => {
         setIsFullText(!isFullText)
@@ -83,7 +99,7 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
                     {isFullSchedule ? '▲' : '▼'}
                 </Text>
             </View>
-            <View style={styles.row}>
+            <Pressable style={styles.row} onPress={() => handlePhoneClick()}>
                 <Image
                     source={require('../../assets/icons/pinkphone.png')}
                     style={styles.icon}
@@ -91,16 +107,16 @@ const RestaurantDetails = ({ description, address, schedule, phone, url }) => {
                 <Text numberOfLines={2} style={styles.text}>
                     {phone}
                 </Text>
-            </View>
-            <View style={styles.row}>
+            </Pressable>
+            <Pressable style={styles.row} onPress={() => handleLocationClick()}>
                 <Image
                     source={require('../../assets/icons/web.png')}
                     style={styles.icon}
                 />
-                <Text numberOfLines={2} style={styles.text}>
-                    {url}
+                <Text numberOfLines={2} style={styles.textLink}>
+                    Ver página web
                 </Text>
-            </View>
+            </Pressable>
         </View>
     )
 }
@@ -136,6 +152,15 @@ const styles = StyleSheet.create({
         fontFamily: 'MontserratMedium',
         fontSize: 12,
         color: '#333333',
+    },
+    textLink: {
+        maxWidth: 320,
+        fontFamily: 'MontserratMedium',
+        fontSize: 12,
+        color: '#333333',
+        textDecorationStyle: 'solid',
+        textDecorationColor: '#333333',
+        textDecorationLine: 'underline',
     },
     textOpen: {
         maxWidth: 320,
