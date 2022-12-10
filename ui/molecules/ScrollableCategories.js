@@ -8,6 +8,7 @@ import {
     Image,
     ImageBackground,
     Pressable,
+    ScrollView,
 } from 'react-native'
 import { getMenuCategories } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
@@ -32,24 +33,26 @@ const ScrollableCategories = ({ id, setFilteredDishes }) => {
     }
 
     const renderItem = ({ item }) => (
-        <Pressable
-            style={
-                categorySelected !== item.category
-                    ? styles.button
-                    : styles.buttonBlack
-            }
-            onPress={() => handleCategorySelect(item.category)}
-        >
-            <Text
+        <View>
+            <Pressable
                 style={
                     categorySelected !== item.category
-                        ? styles.text
-                        : styles.textWhite
+                        ? styles.button
+                        : styles.buttonBlack
                 }
+                onPress={() => handleCategorySelect(item.category)}
             >
-                {item.category}
-            </Text>
-        </Pressable>
+                <Text
+                    style={
+                        categorySelected !== item.category
+                            ? styles.text
+                            : styles.textWhite
+                    }
+                >
+                    {item.category}
+                </Text>
+            </Pressable>
+        </View>
     )
 
     const [loaded] = useFonts({
@@ -61,13 +64,15 @@ const ScrollableCategories = ({ id, setFilteredDishes }) => {
     }
 
     return (
-        <FlatList
-            contentContainerStyle={styles.container}
-            data={categories}
-            renderItem={renderItem}
-            keyExtractor={(item) => item}
-            horizontal
-        />
+        <View>
+            <FlatList
+                contentContainerStyle={styles.container}
+                data={categories}
+                renderItem={renderItem}
+                keyExtractor={(item) => item}
+                horizontal
+            />
+        </View>
     )
 }
 
@@ -81,18 +86,17 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         borderWidth: 1,
         marginHorizontal: 5,
-        padding: 8,
         borderRadius: 10,
-        height: 39,
+        height: 38,
+        paddingHorizontal: 4,
         justifyContent: 'center',
     },
     buttonBlack: {
         backgroundColor: '#000',
         borderWidth: 1,
         marginHorizontal: 5,
-        padding: 8,
         borderRadius: 10,
-        height: 39,
+        paddingHorizontal: 4,
         justifyContent: 'center',
     },
     text: {
