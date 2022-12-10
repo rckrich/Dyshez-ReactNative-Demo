@@ -15,9 +15,11 @@ import { data } from '../utils/restaurantsData'
 import RestaurantsSearch from './RestaurantsSearch'
 import Address from '../ui/molecules/Address'
 import { useFonts } from 'expo-font'
+import { useNavigation } from '@react-navigation/native'
 
 const SearchBar = ({ isHome }) => {
     const [searchLabel, setSearchLabel] = useState('')
+    const navigation = useNavigation()
 
     function filterList(list) {
         return list.filter((listItem) =>
@@ -58,7 +60,12 @@ const SearchBar = ({ isHome }) => {
                             id={restaurant.id}
                         />
                     ))}
-                    <Pressable style={styles.wrapper}>
+                    <Pressable
+                        style={styles.wrapper}
+                        onPress={() => {
+                            navigation.navigate('Results')
+                        }}
+                    >
                         <Text style={styles.text}>
                             Ver todos los resultados
                         </Text>

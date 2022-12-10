@@ -12,6 +12,7 @@ import DrawerNavigator from './components/DrawerNavigator'
 import RestaurantScreen from './pages/Restaurant'
 import DishScreen from './pages/Dish'
 import { useFonts } from 'expo-font'
+import AllResults from './pages/AllResults'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyCfVmH8doh8QtGsgYRiggqOZltbMzECXmU',
@@ -98,6 +99,33 @@ const App = () => {
                     <Stack.Screen
                         name="Dish"
                         component={DishScreen}
+                        options={{
+                            headerTitle: () => (
+                                <Image
+                                    style={{
+                                        width: 90,
+                                        height: 37,
+                                        resizeMode: 'contain',
+                                    }}
+                                    source={require('./assets/logo-pink.png')}
+                                />
+                            ),
+                            headerBackImage: () => (
+                                <Image
+                                    style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginLeft: 10,
+                                    }}
+                                    source={require('./assets/icons/back.png')}
+                                />
+                            ),
+                            headerBackTitleVisible: false,
+                        }}
+                    />
+                    <Stack.Screen
+                        name="Results"
+                        component={AllResults}
                         options={{
                             headerTitle: () => (
                                 <Image
