@@ -103,6 +103,23 @@ export const dishes = [
     },
     // Roca
     {
+        name: 'Queso brie empanizado',
+        id: 'rocaquesobrie',
+        restaurantId: 'roca',
+        description:
+            'Dados de queso brie empanizado con panko acompañado de mermelada rústica de tomates cherry',
+        callories: 200,
+        price: 260,
+        category: 'Entradas',
+        imageUrl: Images.dishes.rocaquesobrie1,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
         name: 'Gravlax de salmón noruego',
         id: 'rocagravlaxsalmon',
         restaurantId: 'roca',
@@ -126,23 +143,6 @@ export const dishes = [
         description: 'Ostiones jumbo vivos de ensenada al estilo Rockefeller',
         callories: 200,
         price: 360,
-        category: 'Entradas',
-        imageUrl: Images.dishes.rocaboneless,
-        images: [
-            Images.dishes.rocaboneless,
-            Images.dishes.rocacamaronesalajillo,
-            Images.dishes.rocaensaladadetomate,
-            Images.dishes.rocafettuccinialfredo,
-        ],
-    },
-    {
-        name: 'Queso brie empanizado',
-        id: 'rocaquesobrie',
-        restaurantId: 'roca',
-        description:
-            'Dados de queso brie empanizado con panko acompañado de mermelada rústica de tomates cherry',
-        callories: 200,
-        price: 260,
         category: 'Entradas',
         imageUrl: Images.dishes.rocaboneless,
         images: [
@@ -270,6 +270,23 @@ export const dishes = [
         ],
     },
     {
+        name: 'Pulpo a la yucateca',
+        id: 'rocapulpo',
+        restaurantId: 'roca',
+        description:
+            'Pulpo maya al estilo pibil acompañado de tuétano, servido con costras de queso',
+        callories: 200,
+        price: 380,
+        category: 'Especialidades',
+        imageUrl: Images.dishes.rocapulpoyuc1,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
         name: 'Caramelos de centro de rib eye (3 pzas)',
         id: 'rocacaramelos',
         restaurantId: 'roca',
@@ -338,23 +355,6 @@ export const dishes = [
         ],
     },
     {
-        name: 'Pulpo a la yucateca',
-        id: 'rocapulpo',
-        restaurantId: 'roca',
-        description:
-            'Pulpo maya al estilo pibil acompañado de tuétano, servido con costras de queso',
-        callories: 200,
-        price: 380,
-        category: 'Especialidades',
-        imageUrl: Images.dishes.rocaboneless,
-        images: [
-            Images.dishes.rocaboneless,
-            Images.dishes.rocacamaronesalajillo,
-            Images.dishes.rocaensaladadetomate,
-            Images.dishes.rocafettuccinialfredo,
-        ],
-    },
-    {
         name: 'Salmón noruego con costra de pistache',
         id: 'rocasalmonpistache',
         restaurantId: 'roca',
@@ -381,6 +381,23 @@ export const dishes = [
         price: 850,
         category: 'Especialidades',
         imageUrl: Images.dishes.rocaboneless,
+        images: [
+            Images.dishes.rocaboneless,
+            Images.dishes.rocacamaronesalajillo,
+            Images.dishes.rocaensaladadetomate,
+            Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Caldo Roca',
+        id: 'rocacaldo',
+        restaurantId: 'roca',
+        description:
+            'A base de tres chiles, acompañado de suadero de filete prime, tocino, chorizo, chistorra y garbanzo',
+        callories: 200,
+        price: 300,
+        category: 'Ensaladas y Sopas',
+        imageUrl: Images.dishes.rocacaldoroca1,
         images: [
             Images.dishes.rocaboneless,
             Images.dishes.rocacamaronesalajillo,
@@ -440,23 +457,6 @@ export const dishes = [
         ],
     },
     {
-        name: 'Caldo Roca',
-        id: 'rocacaldo',
-        restaurantId: 'roca',
-        description:
-            'A base de tres chiles, acompañado de suadero de filete prime, tocino, chorizo, chistorra y garbanzo',
-        callories: 200,
-        price: 300,
-        category: 'Ensaladas y Sopas',
-        imageUrl: Images.dishes.rocaboneless,
-        images: [
-            Images.dishes.rocaboneless,
-            Images.dishes.rocacamaronesalajillo,
-            Images.dishes.rocaensaladadetomate,
-            Images.dishes.rocafettuccinialfredo,
-        ],
-    },
-    {
         name: 'Jugo de carne',
         id: 'rocajugo',
         restaurantId: 'roca',
@@ -487,6 +487,22 @@ export const dishes = [
             Images.dishes.rocacamaronesalajillo,
             Images.dishes.rocaensaladadetomate,
             Images.dishes.rocafettuccinialfredo,
+        ],
+    },
+    {
+        name: 'Risotto negro',
+        id: 'rocarisottonegro',
+        restaurantId: 'roca',
+        description:
+            'Elaborado con tinta de calamar acompañado de camarones u10 y callo de hacha',
+        callories: 200,
+        price: 560,
+        category: 'Risottos y Pastas',
+        imageUrl: Images.dishes.rocarisottonegro1,
+        images: [
+            Images.dishes.rocarisottonegro1,
+            Images.dishes.rocarisottonegro2,
+            Images.dishes.rocarisottonegro3,
         ],
     },
     {
@@ -575,15 +591,14 @@ export const dishes = [
         ],
     },
     {
-        name: 'Risotto negro',
-        id: 'rocarisottonegro',
+        name: 'Rib Eye',
+        id: 'rocaribeye',
         restaurantId: 'roca',
-        description:
-            'Elaborado con tinta de calamar acompañado de camarones u10 y callo de hacha',
+        description: 'Rib Eye',
         callories: 200,
         price: 560,
-        category: 'Risottos y Pastas',
-        imageUrl: Images.dishes.rocaboneless,
+        category: 'Cortes Prime',
+        imageUrl: Images.dishes.rocaribeye1,
         images: [
             Images.dishes.rocaboneless,
             Images.dishes.rocacamaronesalajillo,
@@ -596,22 +611,6 @@ export const dishes = [
         id: 'rocabarbacoa',
         restaurantId: 'roca',
         description: 'Costillar en barbacoa.',
-        callories: 200,
-        price: 560,
-        category: 'Cortes Prime',
-        imageUrl: Images.dishes.rocaboneless,
-        images: [
-            Images.dishes.rocaboneless,
-            Images.dishes.rocacamaronesalajillo,
-            Images.dishes.rocaensaladadetomate,
-            Images.dishes.rocafettuccinialfredo,
-        ],
-    },
-    {
-        name: 'Rib Eye',
-        id: 'rocaribeye',
-        restaurantId: 'roca',
-        description: 'Rib Eye',
         callories: 200,
         price: 560,
         category: 'Cortes Prime',
@@ -711,7 +710,7 @@ export const dishes = [
         callories: 200,
         price: 110,
         category: 'Guarniciones',
-        imageUrl: Images.dishes.rocaboneless,
+        imageUrl: Images.dishes.rocamacncheese1,
         images: [
             Images.dishes.rocaboneless,
             Images.dishes.rocacamaronesalajillo,

@@ -30,6 +30,7 @@ const RestaurantCard = ({ logoUrl, id, isActive }) => {
         <TouchableHighlight
             style={styles.touchable}
             onPress={() => handleClick(id)}
+            underlayColor="transparent"
         >
             <View style={styles.card}>
                 <ImageBackground
@@ -45,13 +46,14 @@ const RestaurantCard = ({ logoUrl, id, isActive }) => {
 }
 
 const RestaurantsSearch = () => {
-    const renderItem = ({ item }) => (
-        <RestaurantCard
-            logoUrl={item.logoUrl}
-            id={item.id}
-            isActive={item.isActive}
-        />
-    )
+    const renderItem = ({ item }) =>
+        !item.isCopy && (
+            <RestaurantCard
+                logoUrl={item.logoUrl}
+                id={item.id}
+                isActive={item.isActive}
+            />
+        )
 
     return (
         <FlatList

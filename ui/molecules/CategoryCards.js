@@ -13,24 +13,33 @@ import { getMenuCategories } from '../../utils/dishesData'
 import { useFonts } from 'expo-font'
 import { useNavigation } from '@react-navigation/native'
 
-const RestaurantCard = ({ category, imageUrl, navigation }) => (
-    <TouchableHighlight
-        style={styles.card}
-        onPress={() => navigation.jumpTo('Squares')}
-    >
-        <ImageBackground
-            source={imageUrl}
-            resizeMode="cover"
-            style={styles.image}
-        >
-            <View style={styles.wrapper}>
-                <Text style={styles.text}>{category}</Text>
-            </View>
-        </ImageBackground>
-    </TouchableHighlight>
-)
+const RestaurantCard = ({
+    category,
+    imageUrl,
+    navigation,
+    handleCategorySelect,
+}) => {
+    const handleClick = () => {
+        handleCategorySelect(category)
+        navigation.jumpTo('Squares')
+    }
 
-const CategoryCards = ({ id }) => {
+    return (
+        <TouchableHighlight style={styles.card} onPress={() => handleClick()}>
+            <ImageBackground
+                source={imageUrl}
+                resizeMode="cover"
+                style={styles.image}
+            >
+                <View style={styles.wrapper}>
+                    <Text style={styles.text}>{category}</Text>
+                </View>
+            </ImageBackground>
+        </TouchableHighlight>
+    )
+}
+
+const CategoryCards = ({ id, handleCategorySelect }) => {
     const navigation = useNavigation()
     const [loaded] = useFonts({
         PoppinsRegular: require('../../assets/fonts/PoppinsRegular.ttf'),
@@ -45,6 +54,7 @@ const CategoryCards = ({ id }) => {
             category={item.category}
             imageUrl={item.imageUrl}
             navigation={navigation}
+            handleCategorySelect={handleCategorySelect}
         />
     )
     const categories = getMenuCategories(id)

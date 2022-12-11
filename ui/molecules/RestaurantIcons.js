@@ -25,7 +25,7 @@ const RestaurantIcons = ({ handleShowDescription, handleShowModal }) => {
                 onPress={() => handleLocationClick()}
             >
                 <Image
-                    style={styles.icon}
+                    style={{ marginHorizontal: 8, height: 26, width: 20 }}
                     source={require('../../assets/icons/location.png')}
                 />
             </TouchableHighlight>
@@ -45,7 +45,7 @@ const RestaurantIcons = ({ handleShowDescription, handleShowModal }) => {
                 onPress={() => alert('WIP')}
             >
                 <Image
-                    style={{ marginHorizontal: 5, height: 24, width: 20 }}
+                    style={{ marginHorizontal: 8, height: 24, width: 20 }}
                     source={require('../../assets/icons/reservation.png')}
                 />
             </TouchableHighlight>
@@ -80,14 +80,14 @@ const styles = StyleSheet.create({
     },
     finalIcon: {
         marginRight: 0,
-        marginLeft: 1,
+        marginLeft: 8,
         height: 22,
         width: 22,
     },
     icon: {
-        width: 22,
+        width: 25,
         height: 22,
-        marginHorizontal: 5,
+        marginHorizontal: 8,
     },
     touchable: {
         marginHorizontal: 2,

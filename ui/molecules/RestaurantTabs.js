@@ -7,11 +7,28 @@ import CategoryCards from './CategoryCards'
 import ListMenu from './ListMenu'
 import SquaresMenu from './SquaresMenu'
 import SearchMenu from './SearchMenu'
+import { filterMenu } from '../../utils/dishesData'
 
 const Tab = createMaterialTopTabNavigator()
 
 const RestaurantTabs = ({ id }) => {
     const [filteredDishes, setFilteredDishes] = useState([])
+    const [isFiltered, setIsFiltered] = useState(false)
+    const [categorySelected, setCategorySelected] = useState(null)
+
+    const handleCategorySelect = (category) => {
+        if (category !== categorySelected) {
+            const helper = filterMenu(id, category)
+            setFilteredDishes(helper)
+            setIsFiltered(true)
+            setCategorySelected(category)
+        } else {
+            setFilteredDishes([])
+            setIsFiltered(false)
+            setCategorySelected(null)
+        }
+    }
+
     return (
         <Tab.Navigator
             screenOptions={{
@@ -20,7 +37,12 @@ const RestaurantTabs = ({ id }) => {
         >
             <Tab.Screen
                 name="Dishes"
-                children={() => <CategoryCards id={id} />}
+                children={() => (
+                    <CategoryCards
+                        id={id}
+                        handleCategorySelect={handleCategorySelect}
+                    />
+                )}
                 options={{
                     tabBarShowLabel: false,
                     tabBarIcon: ({ focused }) => (
@@ -40,8 +62,9 @@ const RestaurantTabs = ({ id }) => {
                 children={() => (
                     <ListMenu
                         id={id}
-                        setFilteredDishes={setFilteredDishes}
                         filteredDishes={filteredDishes}
+                        handleCategorySelect={handleCategorySelect}
+                        categorySelected={categorySelected}
                     />
                 )}
                 options={{
@@ -63,8 +86,9 @@ const RestaurantTabs = ({ id }) => {
                 children={() => (
                     <SquaresMenu
                         id={id}
-                        setFilteredDishes={setFilteredDishes}
                         filteredDishes={filteredDishes}
+                        handleCategorySelect={handleCategorySelect}
+                        categorySelected={categorySelected}
                     />
                 )}
                 options={{
