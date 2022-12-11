@@ -17,6 +17,7 @@ const BottomModal = ({
     modalVisible,
     setIsBottomModalVisible,
     handleMenuModal,
+    handleShareModal,
 }) => {
     const [loaded] = useFonts({
         PoppinsBold: require('../../assets/fonts/PoppinsBold.ttf'),
@@ -39,7 +40,7 @@ const BottomModal = ({
             <View style={styles.container}>
                 <Text style={styles.title}>Opciones del restaurante</Text>
                 <View style={styles.buttons}>
-                    <Pressable style={styles.button}>
+                    <Pressable style={styles.button} onPress={handleShareModal}>
                         <Image
                             source={require('../../assets/icons/share.png')}
                             style={styles.icon}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, View, Image, StyleSheet, Button } from 'react-native'
+import { Text, View, Image, StyleSheet, Button, Share } from 'react-native'
 import RestaurantHeader from '../ui/molecules/RestaurantHeader'
 import RestaurantTabs from '../ui/molecules/RestaurantTabs'
 import BottomTab from '../components/BottomTab'
@@ -8,12 +8,14 @@ import { getRestaurant } from '../utils/restaurantsData'
 import RestaurantDetails from '../ui/molecules/RestaurantDetails'
 import BottomModal from '../ui/molecules/BottomModal'
 import MenuModal from '../ui/molecules/MenuModal'
+import ShareModal from '../ui/molecules/ShareModal'
 
 const Restaurant = ({ route }) => {
     const restaurant = getRestaurant(route.params.id)
     const [isDescriptionOpen, setIsDescriptionOpen] = useState(false)
     const [isBottomModalVisible, setIsBottomModalVisible] = useState(false)
     const [isMenuModalVisible, setIsMenuModalVisible] = useState(false)
+    const [isShareModalVisible, setIsShareModalVisible] = useState(false)
     const handleShowDescription = () => {
         setIsDescriptionOpen(!isDescriptionOpen)
     }
@@ -25,6 +27,11 @@ const Restaurant = ({ route }) => {
     const handleMenuModal = () => {
         setIsBottomModalVisible(false)
         setIsMenuModalVisible(!isMenuModalVisible)
+    }
+
+    const handleShareModal = () => {
+        setIsBottomModalVisible(false)
+        setIsShareModalVisible(!isShareModalVisible)
     }
 
     return (
@@ -50,10 +57,15 @@ const Restaurant = ({ route }) => {
                 modalVisible={isBottomModalVisible}
                 setIsBottomModalVisible={setIsBottomModalVisible}
                 handleMenuModal={handleMenuModal}
+                handleShareModal={handleShareModal}
             />
             <MenuModal
                 modalVisible={isMenuModalVisible}
                 handleMenuModal={handleMenuModal}
+            />
+            <ShareModal
+                modalVisible={isShareModalVisible}
+                handleShareModal={handleShareModal}
             />
         </View>
     )
