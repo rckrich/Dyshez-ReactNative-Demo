@@ -41,24 +41,24 @@ const App = () => {
         })
     })
 
-    if (!isLogged) {
-        return (
-            <NavigationContainer>
-                <Stack.Navigator initialRouteName="Landing">
-                    <Stack.Screen
-                        name="Landing"
-                        component={LandingScreen}
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="Register"
-                        component={RegisterScreen}
-                        options={{ auth: auth }}
-                    />
-                </Stack.Navigator>
-            </NavigationContainer>
-        )
-    }
+    // if (!isLogged) {
+    //     return (
+    //         <NavigationContainer>
+    //             <Stack.Navigator initialRouteName="Landing">
+    //                 <Stack.Screen
+    //                     name="Landing"
+    //                     component={LandingScreen}
+    //                     options={{ headerShown: false }}
+    //                 />
+    //                 <Stack.Screen
+    //                     name="Register"
+    //                     component={RegisterScreen}
+    //                     options={{ auth: auth }}
+    //                 />
+    //             </Stack.Navigator>
+    //         </NavigationContainer>
+    //     )
+    // }
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
